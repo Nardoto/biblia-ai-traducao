@@ -6,3 +6,4 @@ logs/
 site/.next/
 site/out/
 site/node_modules/
+.vercel
