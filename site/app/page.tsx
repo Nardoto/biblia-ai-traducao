@@ -12,7 +12,7 @@ export default function Home() {
         {LANGUAGES.map((lang) => (
           <Link
             key={lang}
-            href={`/${lang}/${LANG_CONFIG[lang].testament.nt}/${lang === 'pt' ? 'mateus' : lang === 'es' ? 'mateo' : 'matthew'}/1/`}
+            href={`/${lang}/`}
             className="px-6 py-3 rounded-lg bg-[var(--accent)] text-white font-sans font-medium hover:opacity-90 transition"
           >
             {LANG_CONFIG[lang].label}

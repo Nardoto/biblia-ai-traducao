@@ -42,8 +42,40 @@ export default function ChapterPage({
   const prevChapter = chapter > 1 ? chapter - 1 : null;
   const nextChapter = chapter < book.chapters ? chapter + 1 : null;
 
+  const bookLabels: Record<Language, string> = {
+    pt: 'Livros',
+    en: 'Books',
+    es: 'Libros',
+  };
+
   return (
     <div>
+      {/* Mobile header: back to books + language selector */}
+      <div className="flex items-center justify-between mb-4 md:hidden">
+        <Link
+          href={`/${lang}/`}
+          className="text-[var(--accent)] font-sans text-sm flex items-center gap-1"
+        >
+          &larr; {bookLabels[lang]}
+        </Link>
+        <div className="flex gap-1">
+          {LANGUAGES.map((l) => (
+            <Link
+              key={l}
+              href={`/${l}/${LANG_CONFIG[l].testament[testamentKey]}/${book.names[l]}/1/`}
+              className={`px-2 py-0.5 rounded text-xs font-sans ${
+                l === lang ? 'bg-[var(--accent)] text-white' : 'text-[var(--muted)]'
+              }`}
+            >
+              {l.toUpperCase()}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Book title */}
+      <h2 className="text-lg font-bold font-serif mb-3">{book.display[lang]}</h2>
+
       {/* Chapter navigation grid */}
       <div className="mb-6 flex flex-wrap gap-1">
         {Array.from({ length: book.chapters }, (_, i) => i + 1).map((ch) => {
