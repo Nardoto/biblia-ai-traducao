@@ -2,3 +2,7 @@ fontes/mcp-server/
 node_modules/
 .env
 *.log
+logs/
+site/.next/
+site/out/
+site/node_modules/
