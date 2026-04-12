@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { LANG_CONFIG, LANGUAGES, getBooksByTestament, getTestamentLabel, type Language } from '@/lib/bible-data';
+import DarkModeToggle from '@/components/DarkModeToggle';
 
 export function generateStaticParams() {
   return LANGUAGES.map((lang) => ({ lang }));
@@ -19,21 +20,24 @@ export default function LangHome({ params }: { params: { lang: Language } }) {
 
   return (
     <div>
-      {/* Language selector */}
-      <div className="flex gap-2 mb-8">
-        {LANGUAGES.map((l) => (
-          <Link
-            key={l}
-            href={`/${l}/`}
-            className={`px-3 py-1.5 rounded font-sans text-sm font-medium transition ${
-              l === lang
-                ? 'bg-[var(--accent)] text-white'
-                : 'border border-[var(--border)] text-[var(--muted)] hover:text-[var(--text)]'
-            }`}
-          >
-            {LANG_CONFIG[l].label}
-          </Link>
-        ))}
+      {/* Language selector + dark mode */}
+      <div className="flex items-center justify-between mb-8">
+        <div className="flex gap-2">
+          {LANGUAGES.map((l) => (
+            <Link
+              key={l}
+              href={`/${l}/`}
+              className={`px-3 py-1.5 rounded font-sans text-sm font-medium transition ${
+                l === lang
+                  ? 'bg-[var(--accent)] text-white'
+                  : 'border border-[var(--border)] text-[var(--muted)] hover:text-[var(--text)]'
+              }`}
+            >
+              {LANG_CONFIG[l].label}
+            </Link>
+          ))}
+        </div>
+        <DarkModeToggle />
       </div>
 
       <h1 className="text-2xl font-bold mb-8 font-serif">{titles[lang]}</h1>

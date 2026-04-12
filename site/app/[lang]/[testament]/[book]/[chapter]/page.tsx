@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { BOOKS, LANG_CONFIG, LANGUAGES, findBook, type Language } from '@/lib/bible-data';
 import { getChapterContent, chapterExists } from '@/lib/markdown';
+import DarkModeToggle from '@/components/DarkModeToggle';
 
 export function generateStaticParams() {
   const params: { lang: string; testament: string; book: string; chapter: string }[] = [];
@@ -50,7 +51,7 @@ export default function ChapterPage({
 
   return (
     <div>
-      {/* Mobile header: back to books + language selector */}
+      {/* Mobile header: back to books + language selector + dark mode */}
       <div className="flex items-center justify-between mb-4 md:hidden">
         <Link
           href={`/${lang}/`}
@@ -58,18 +59,21 @@ export default function ChapterPage({
         >
           &larr; {bookLabels[lang]}
         </Link>
-        <div className="flex gap-1">
-          {LANGUAGES.map((l) => (
-            <Link
-              key={l}
-              href={`/${l}/${LANG_CONFIG[l].testament[testamentKey]}/${book.names[l]}/1/`}
-              className={`px-2 py-0.5 rounded text-xs font-sans ${
-                l === lang ? 'bg-[var(--accent)] text-white' : 'text-[var(--muted)]'
-              }`}
-            >
-              {l.toUpperCase()}
-            </Link>
-          ))}
+        <div className="flex items-center gap-2">
+          <div className="flex gap-1">
+            {LANGUAGES.map((l) => (
+              <Link
+                key={l}
+                href={`/${l}/${LANG_CONFIG[l].testament[testamentKey]}/${book.names[l]}/1/`}
+                className={`px-2 py-0.5 rounded text-xs font-sans ${
+                  l === lang ? 'bg-[var(--accent)] text-white' : 'text-[var(--muted)]'
+                }`}
+              >
+                {l.toUpperCase()}
+              </Link>
+            ))}
+          </div>
+          <DarkModeToggle />
         </div>
       </div>
 
