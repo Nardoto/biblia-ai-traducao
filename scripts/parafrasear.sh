@@ -80,11 +80,23 @@ RETRY_DELAY=30
 for attempt in $(seq 1 $MAX_RETRIES); do
     if claude -p "$PROMPT
 
-$INSTRUCAO" > "$SAIDA" 2>/dev/null; then
+$INSTRUCAO" --output-format text > "$SAIDA" 2>/dev/null; then
         # Verificar se o arquivo nao esta vazio
         if [ -s "$SAIDA" ]; then
-            echo "  [$LANG] Salvo: $SAIDA"
-            exit 0
+            # Validar: deve comecar com # (heading markdown)
+            # Se tiver lixo antes do heading, limpar
+            if grep -q "^# " "$SAIDA"; then
+                FIRST_HEADING=$(grep -n "^# " "$SAIDA" | head -1 | cut -d: -f1)
+                if [ "$FIRST_HEADING" -gt 1 ]; then
+                    tail -n +"$FIRST_HEADING" "$SAIDA" > "${SAIDA}.tmp"
+                    mv "${SAIDA}.tmp" "$SAIDA"
+                fi
+                echo "  [$LANG] Salvo: $SAIDA"
+                exit 0
+            else
+                echo "  [$LANG] Output invalido (sem heading), tentando novamente..."
+                rm -f "$SAIDA"
+            fi
         else
             echo "  [$LANG] Arquivo vazio, tentando novamente..."
             rm -f "$SAIDA"
