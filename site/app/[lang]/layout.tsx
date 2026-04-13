@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { BOOKS, LANG_CONFIG, LANGUAGES, getBooksByTestament, getTestamentLabel, type Language } from '@/lib/bible-data';
+import Logo from '@/components/Logo';
 
 export function generateStaticParams() {
   return LANGUAGES.map((lang) => ({ lang }));
@@ -21,6 +22,12 @@ export default function LangLayout({
     <div className="flex min-h-screen">
       {/* Sidebar */}
       <aside className="hidden md:block w-64 border-r border-[var(--border)] p-4 overflow-y-auto h-screen sticky top-0">
+        {/* Logo */}
+        <Link href={`/${lang}/`} className="flex items-center gap-2 mb-4 hover:opacity-80 transition">
+          <Logo size={24} />
+          <span className="text-sm font-bold font-serif">Bíblia Livre AI</span>
+        </Link>
+
         {/* Language selector */}
         <div className="flex gap-2 mb-6">
           {LANGUAGES.map((l) => (
@@ -67,6 +74,19 @@ export default function LangLayout({
             </li>
           ))}
         </ul>
+
+        {/* Footer links */}
+        <div className="mt-8 pt-4 border-t border-[var(--border)] space-y-1">
+          <Link href={`/${lang}/sobre/`} className="block text-xs font-sans text-[var(--muted)] hover:text-[var(--accent)] transition">
+            {lang === 'pt' ? 'Sobre' : lang === 'en' ? 'About' : 'Acerca'}
+          </Link>
+          <Link href={`/${lang}/metodologia/`} className="block text-xs font-sans text-[var(--muted)] hover:text-[var(--accent)] transition">
+            {lang === 'pt' ? 'Metodologia' : lang === 'en' ? 'Methodology' : 'Metodología'}
+          </Link>
+          <a href="https://github.com/Nardoto/biblia-ai-traducao" target="_blank" rel="noopener noreferrer" className="block text-xs font-sans text-[var(--muted)] hover:text-[var(--accent)] transition">
+            GitHub
+          </a>
+        </div>
       </aside>
 
       {/* Main content */}

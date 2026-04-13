@@ -2,8 +2,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Biblia Parafrase - AI',
-  description: 'Parafrase da Biblia em portugues, ingles e espanhol, criada com IA a partir dos textos originais.',
+  title: 'Bíblia Livre AI',
+  description: 'Paráfrase da Bíblia em português, inglês e espanhol, criada com IA a partir dos textos originais em grego e hebraico. Código aberto, uso livre.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
