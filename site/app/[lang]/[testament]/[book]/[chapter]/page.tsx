@@ -84,12 +84,25 @@ export default function ChapterPage({
       <div className="mb-6 flex flex-wrap gap-1">
         {Array.from({ length: book.chapters }, (_, i) => i + 1).map((ch) => {
           const exists = chapterExists(lang, testamentKey, bookSlug, ch);
+          const isCurrent = ch === chapter;
+
+          if (!exists && !isCurrent) {
+            return (
+              <span
+                key={ch}
+                className="w-8 h-8 flex items-center justify-center text-xs rounded font-sans text-[var(--muted)] opacity-30 cursor-default"
+              >
+                {ch}
+              </span>
+            );
+          }
+
           return (
             <Link
               key={ch}
               href={`/${lang}/${testament}/${bookSlug}/${ch}/`}
-              className={`w-8 h-8 flex items-center justify-center text-xs rounded font-sans
-                ${ch === chapter ? 'bg-[var(--accent)] text-white' : exists ? 'bg-[var(--border)] hover:bg-[var(--accent)] hover:text-white' : 'text-[var(--muted)] border border-[var(--border)] opacity-50'}`}
+              className={`w-8 h-8 flex items-center justify-center text-xs rounded font-sans transition
+                ${isCurrent ? 'bg-[var(--accent)] text-white' : 'bg-[var(--accent-bg)] text-[var(--text)] hover:bg-[var(--accent)] hover:text-white'}`}
             >
               {ch}
             </Link>

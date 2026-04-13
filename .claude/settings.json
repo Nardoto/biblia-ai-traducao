@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash scripts/validar-parafrase.sh",
+            "timeout": 10,
+            "statusMessage": "Validando parafrase..."
+          }
+        ]
+      }
+    ]
+  }
+}
