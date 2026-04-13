@@ -5,13 +5,21 @@ import { useState, useMemo } from 'react';
 interface Verse {
   number: number;
   text: string;
-  noteTags: string[];
 }
 
 interface Note {
   id: string;
   verse: string;
   text: string;
+}
+
+// Converte numero pra sobrescrito Unicode (1 → ¹, 23 → ²³)
+function toSuperscript(n: number): string {
+  const map: Record<string, string> = {
+    '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴',
+    '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹',
+  };
+  return String(n).split('').map(c => map[c] || c).join('');
 }
 
 function parseContent(markdown: string): { title: string; verses: Verse[]; notes: Note[] } {
@@ -24,13 +32,11 @@ function parseContent(markdown: string): { title: string; verses: Verse[]; notes
   for (const line of lines) {
     const trimmed = line.trim();
 
-    // Title
     if (trimmed.startsWith('# ') && !trimmed.startsWith('## ')) {
       title = trimmed.slice(2);
       continue;
     }
 
-    // Notes section
     if (trimmed === '## Notas' || trimmed === '## Notes') {
       inNotes = true;
       continue;
@@ -44,17 +50,13 @@ function parseContent(markdown: string): { title: string; verses: Verse[]; notes
       continue;
     }
 
-    // Verses - match **N** pattern
     if (!inNotes) {
       const verseMatch = trimmed.match(/^\*\*(\d+)\*\*\s+(.+)/);
       if (verseMatch) {
         const num = parseInt(verseMatch[1], 10);
         const text = verseMatch[2];
-        // Find note tags (superscript letters like ᵃ ᵇ ᶜ)
-        const tags = text.match(/[ᵃᵇᶜᵈᵉᶠᵍʰⁱʲ]/g) || [];
-        verses.push({ number: num, text, noteTags: tags });
+        verses.push({ number: num, text });
       } else if (trimmed && !trimmed.startsWith('---') && !trimmed.startsWith('##') && verses.length > 0) {
-        // Continuation of previous verse
         verses[verses.length - 1].text += ' ' + trimmed;
       }
     }
@@ -63,11 +65,18 @@ function parseContent(markdown: string): { title: string; verses: Verse[]; notes
   return { title, verses, notes };
 }
 
+function cleanText(text: string): string {
+  return text
+    .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/\*(.+?)\*/g, '$1')
+    .replace(/[ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿ]/g, '');
+}
+
 function formatVerseHtml(text: string): string {
   return text
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
-    .replace(/[ᵃᵇᶜᵈᵉᶠᵍʰⁱʲ]/g, '<sup>$&</sup>');
+    .replace(/[ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿ]/g, '<sup class="note-tag">$&</sup>');
 }
 
 export default function VerseReader({
@@ -81,9 +90,11 @@ export default function VerseReader({
 }) {
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [showNote, setShowNote] = useState<string | null>(null);
+  const [readingMode, setReadingMode] = useState(false);
   const { title, verses, notes } = useMemo(() => parseContent(content), [content]);
 
   const toggleVerse = (num: number) => {
+    if (readingMode) return;
     setSelected((prev) => {
       const next = new Set(prev);
       if (next.has(num)) {
@@ -97,11 +108,31 @@ export default function VerseReader({
 
   const getSelectedText = () => {
     const sorted = Array.from(selected).sort((a, b) => a - b);
-    const selectedVerses = sorted.map((n) => {
+    const verseRanges = formatVerseRange(sorted);
+    const text = sorted.map((n) => {
       const v = verses.find((v) => v.number === n);
-      return v ? `${n}. ${v.text.replace(/<[^>]+>/g, '').replace(/[ᵃᵇᶜᵈᵉᶠᵍʰⁱʲ]/g, '')}` : '';
-    });
-    return `${bookName} ${chapter}:${sorted.join(',')}\n\n${selectedVerses.join('\n')}\n\n— Biblia Parafrase AI`;
+      return v ? `${toSuperscript(n)}${cleanText(v.text)}` : '';
+    }).join(' ');
+    return `${bookName} ${chapter}:${verseRanges}\n\n${text}\n\n— Bíblia Paráfrase AI`;
+  };
+
+  // Formata ranges: [1,2,3,5,7,8] → "1-3,5,7-8"
+  const formatVerseRange = (nums: number[]): string => {
+    if (nums.length === 0) return '';
+    const ranges: string[] = [];
+    let start = nums[0];
+    let end = nums[0];
+    for (let i = 1; i < nums.length; i++) {
+      if (nums[i] === end + 1) {
+        end = nums[i];
+      } else {
+        ranges.push(start === end ? String(start) : `${start}-${end}`);
+        start = nums[i];
+        end = nums[i];
+      }
+    }
+    ranges.push(start === end ? String(start) : `${start}-${end}`);
+    return ranges.join(',');
   };
 
   const handleShare = async () => {
@@ -110,54 +141,83 @@ export default function VerseReader({
       await navigator.share({ text });
     } else {
       await navigator.clipboard.writeText(text);
-      alert('Copiado!');
     }
   };
 
   const clearSelection = () => setSelected(new Set());
 
-  // Find notes for a specific verse number
   const getNotesForVerse = (verseNum: number): Note[] => {
     return notes.filter((n) => n.verse.startsWith(String(verseNum)));
   };
 
+  // Modo leitura: texto corrido sem números
+  if (readingMode) {
+    const fullText = verses.map((v) => cleanText(v.text)).join(' ');
+    return (
+      <div className="verse-content">
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="mb-0">{title || `${bookName} ${chapter}`}</h1>
+          <button
+            onClick={() => setReadingMode(false)}
+            className="px-3 py-1.5 rounded-full text-xs font-sans border border-[var(--border)] text-[var(--muted)] hover:text-[var(--text)] transition"
+          >
+            Versículos
+          </button>
+        </div>
+        <p className="leading-[2.2] text-[1.15rem]">{fullText}</p>
+      </div>
+    );
+  }
+
   return (
     <div className="verse-content">
-      <h1>{title || `${bookName} ${chapter}`}</h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="mb-0">{title || `${bookName} ${chapter}`}</h1>
+        <button
+          onClick={() => { setReadingMode(true); clearSelection(); }}
+          className="px-3 py-1.5 rounded-full text-xs font-sans border border-[var(--border)] text-[var(--muted)] hover:text-[var(--text)] transition"
+        >
+          Leitura
+        </button>
+      </div>
 
-      <div className="space-y-1">
+      <div>
         {verses.map((v) => {
           const verseNotes = getNotesForVerse(v.number);
+          const isSelected = selected.has(v.number);
           return (
-            <div key={v.number}>
-              <div
-                className={`verse-line ${selected.has(v.number) ? 'selected' : ''}`}
+            <span key={v.number}>
+              <span
+                className={`verse-inline ${isSelected ? 'selected' : ''}`}
                 onClick={() => toggleVerse(v.number)}
               >
-                <span dangerouslySetInnerHTML={{ __html: `<strong>${v.number}</strong> ${formatVerseHtml(v.text)}` }} />
-                {verseNotes.length > 0 && (
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setShowNote(showNote === String(v.number) ? null : String(v.number));
-                    }}
-                    className="inline-block ml-1 w-5 h-5 rounded-full text-xs font-sans bg-[var(--accent-bg)] text-[var(--note-tag)] hover:bg-[var(--accent-soft)] transition"
-                    title="Ver nota"
-                  >
-                    ?
-                  </button>
-                )}
-              </div>
-              {showNote === String(v.number) && verseNotes.length > 0 && (
-                <div className="ml-4 mt-1 mb-2 p-3 rounded-lg bg-[var(--accent-bg)] text-sm text-[var(--muted)] font-sans leading-relaxed border-l-2 border-[var(--note-tag)]">
-                  {verseNotes.map((n, i) => (
-                    <p key={i} className={i > 0 ? 'mt-2' : ''}>
-                      <span className="font-medium text-[var(--note-tag)]">v.{n.verse}</span>: {n.text}
-                    </p>
-                  ))}
-                </div>
+                <sup className="verse-num">{v.number}</sup>
+                <span dangerouslySetInnerHTML={{ __html: formatVerseHtml(v.text) }} />
+              </span>
+              {verseNotes.length > 0 && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowNote(showNote === String(v.number) ? null : String(v.number));
+                  }}
+                  className="note-btn"
+                  title="Ver nota"
+                >
+                  ✦
+                </button>
               )}
-            </div>
+              {showNote === String(v.number) && verseNotes.length > 0 && (
+                <span className="note-inline">
+                  {verseNotes.map((n, i) => (
+                    <span key={i}>
+                      {i > 0 && ' '}
+                      <span className="font-medium text-[var(--note-tag)]">v.{n.verse}</span>: {n.text}
+                    </span>
+                  ))}
+                </span>
+              )}
+              {' '}
+            </span>
           );
         })}
       </div>
@@ -180,7 +240,7 @@ export default function VerseReader({
       {/* Share bar */}
       {selected.size > 0 && (
         <div className="share-bar">
-          <span>{selected.size} {selected.size === 1 ? 'versiculo' : 'versiculos'}</span>
+          <span>{selected.size} {selected.size === 1 ? 'versículo' : 'versículos'}</span>
           <button onClick={handleShare} className="underline underline-offset-2">
             Compartilhar
           </button>
