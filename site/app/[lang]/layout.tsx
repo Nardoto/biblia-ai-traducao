@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { BOOKS, LANG_CONFIG, LANGUAGES, getBooksByTestament, getTestamentLabel, type Language } from '@/lib/bible-data';
 import Logo from '@/components/Logo';
+import SiteFooter from '@/components/SiteFooter';
 
 export function generateStaticParams() {
   return LANGUAGES.map((lang) => ({ lang }));
@@ -92,6 +93,7 @@ export default function LangLayout({
       {/* Main content */}
       <main className="flex-1 max-w-3xl mx-auto px-4 py-8 md:px-8">
         {children}
+        <SiteFooter lang={lang} />
       </main>
     </div>
   );
