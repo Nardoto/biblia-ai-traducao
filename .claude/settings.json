@@ -8,7 +8,13 @@
             "type": "command",
             "command": "bash scripts/validar-parafrase.sh",
             "timeout": 10,
-            "statusMessage": "Validando parafrase..."
+            "statusMessage": "Validando paráfrase..."
+          },
+          {
+            "type": "command",
+            "command": "bash scripts/validar-acentos.sh",
+            "timeout": 10,
+            "statusMessage": "Validando acentuação..."
           }
         ]
       }

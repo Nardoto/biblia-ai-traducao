@@ -58,6 +58,15 @@ Responde SOLO con el texto parafraseado en este formato markdown:
 - v.Xa: [termino original] (transliteracion) — explicacion del matiz
 - v.Y: [nota interpretativa cuando sea necesario]
 
+## CRITICO: Acentuacion
+
+DEBES OBLIGATORIAMENTE usar acentuación correcta en español. TODOS los acentos deben estar presentes: á é í ó ú ñ ü ¿ ¡. Texto sin acentos es INACEPTABLE y será rechazado. Ejemplos:
+- "también" (NUNCA "tambien")
+- "corazón" (NUNCA "corazon")
+- "está" (NUNCA "esta" cuando es verbo)
+- "espíritu" (NUNCA "espiritu")
+- "señor" (NUNCA "senor")
+
 ## Importante
 
 - Si tienes acceso a las herramientas MCP bible-translation, usa get_interlinear y get_morphology para consultar el original

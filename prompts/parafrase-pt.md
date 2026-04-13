@@ -57,8 +57,17 @@ Responda APENAS com o texto parafraseado neste formato markdown:
 - v.Xa: [termo original] (transliteracao) — explicacao da nuance
 - v.Y: [nota interpretativa quando necessario]
 
+## CRITICO: Acentuacao
+
+VOCE DEVE OBRIGATORIAMENTE usar acentuacao correta em portugues. TODOS os acentos devem estar presentes: á é í ó ú ã õ â ê ô ç à. Texto sem acento e INACEITAVEL e sera rejeitado. Exemplos:
+- "não" (NUNCA "nao")
+- "também" (NUNCA "tambem")
+- "você" (NUNCA "voce")
+- "então" (NUNCA "entao")
+- "coração" (NUNCA "coracao")
+
 ## Importante
 
 - Se tiver acesso ao MCP bible-translation, use get_interlinear e get_morphology para consultar o original
 - Se NAO tiver acesso ao MCP, use seu conhecimento dos textos originais
-- Nao inclua introducoes, comentarios ou explicacoes fora do formato acima
+- Não inclua introduções, comentários ou explicações fora do formato acima
