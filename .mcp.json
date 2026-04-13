@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "bible-translation": {
+      "command": "node",
+      "args": ["fontes/mcp-server/dist/index.js"],
+      "cwd": "/data/data/com.termux/files/home/downloads/biblia-ai-traducao/fontes/mcp-server"
+    }
+  }
+}
