@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { BOOKS, LANG_CONFIG, LANGUAGES, findBook, type Language } from '@/lib/bible-data';
 import { getChapterContent, chapterExists } from '@/lib/markdown';
 import DarkModeToggle from '@/components/DarkModeToggle';
+import VerseReader from '@/components/VerseReader';
 
 export function generateStaticParams() {
   const params: { lang: string; testament: string; book: string; chapter: string }[] = [];
@@ -112,7 +113,7 @@ export default function ChapterPage({
 
       {/* Content */}
       {content ? (
-        <article className="verse-content font-serif" dangerouslySetInnerHTML={{ __html: markdownToHtml(content) }} />
+        <VerseReader content={content} bookName={book.display[lang]} chapter={chapter} />
       ) : (
         <div className="text-center py-16">
           <p className="text-[var(--muted)] text-lg mb-2">
@@ -143,33 +144,3 @@ export default function ChapterPage({
   );
 }
 
-// Simple markdown to HTML converter (no external deps needed)
-function markdownToHtml(md: string): string {
-  return md
-    // Headers
-    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
-    // Bold
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    // Italic
-    .replace(/\*(.+?)\*/g, '<em>$1</em>')
-    // Horizontal rule
-    .replace(/^---$/gm, '<hr />')
-    // List items
-    .replace(/^- (.+)$/gm, '<li>$1</li>')
-    // Wrap consecutive <li> in <ul>
-    .replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>')
-    // Paragraphs (double newline)
-    .replace(/\n\n/g, '</p><p>')
-    // Single newlines to <br> within paragraphs
-    .replace(/\n/g, '<br />')
-    // Wrap in paragraph
-    .replace(/^/, '<p>')
-    .replace(/$/, '</p>')
-    // Clean up empty paragraphs
-    .replace(/<p><\/p>/g, '')
-    .replace(/<p><hr \/><\/p>/g, '<hr />')
-    .replace(/<p>(<h[123]>)/g, '$1')
-    .replace(/(<\/h[123]>)<\/p>/g, '$1');
-}
