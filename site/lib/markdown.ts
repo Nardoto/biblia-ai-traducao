@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { LANG_CONFIG, type Language } from './bible-data';
+import { LANG_CONFIG, type Language, type Book } from './bible-data';
 
 export function getChapterContent(
   lang: Language,
@@ -26,6 +26,31 @@ export function getChapterContent(
   } catch {
     return null;
   }
+}
+
+export function bookHasContent(
+  lang: Language,
+  book: Book
+): boolean {
+  for (let ch = 1; ch <= book.chapters; ch++) {
+    if (chapterExists(lang, book.testament, book.names[lang], ch)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+export function countBookChapters(
+  lang: Language,
+  book: Book
+): number {
+  let count = 0;
+  for (let ch = 1; ch <= book.chapters; ch++) {
+    if (chapterExists(lang, book.testament, book.names[lang], ch)) {
+      count++;
+    }
+  }
+  return count;
 }
 
 export function chapterExists(

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { LANG_CONFIG, LANGUAGES, getBooksByTestament, getTestamentLabel, type Language } from '@/lib/bible-data';
+import { bookHasContent, countBookChapters } from '@/lib/markdown';
 import DarkModeToggle from '@/components/DarkModeToggle';
 
 export function generateStaticParams() {
@@ -16,6 +17,34 @@ export default function LangHome({ params }: { params: { lang: Language } }) {
     pt: 'Escolha um livro',
     en: 'Choose a book',
     es: 'Elige un libro',
+  };
+
+  const renderBook = (book: typeof ntBooks[0], testament: 'nt' | 'ot') => {
+    const hasContent = bookHasContent(lang, book);
+    const chapCount = hasContent ? countBookChapters(lang, book) : 0;
+    const testamentSlug = config.testament[testament];
+
+    if (!hasContent) {
+      return (
+        <span
+          key={book.id}
+          className="px-3 py-2.5 rounded-lg text-sm font-sans text-[var(--muted)] opacity-40 cursor-default"
+        >
+          {book.display[lang]}
+        </span>
+      );
+    }
+
+    return (
+      <Link
+        key={book.id}
+        href={`/${lang}/${testamentSlug}/${book.names[lang]}/1/`}
+        className="px-3 py-2.5 rounded-lg border border-[var(--accent-soft)] bg-[var(--accent-bg)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition text-sm font-sans"
+      >
+        <span>{book.display[lang]}</span>
+        <span className="ml-1.5 text-xs text-[var(--muted)]">{chapCount}/{book.chapters}</span>
+      </Link>
+    );
   };
 
   return (
@@ -48,15 +77,7 @@ export default function LangHome({ params }: { params: { lang: Language } }) {
           {getTestamentLabel(lang, 'nt')}
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-          {ntBooks.map((book) => (
-            <Link
-              key={book.id}
-              href={`/${lang}/${config.testament.nt}/${book.names[lang]}/1/`}
-              className="px-3 py-2.5 rounded-lg border border-[var(--border)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition text-sm font-sans"
-            >
-              {book.display[lang]}
-            </Link>
-          ))}
+          {ntBooks.map((book) => renderBook(book, 'nt'))}
         </div>
       </section>
 
@@ -66,15 +87,7 @@ export default function LangHome({ params }: { params: { lang: Language } }) {
           {getTestamentLabel(lang, 'ot')}
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-          {otBooks.map((book) => (
-            <Link
-              key={book.id}
-              href={`/${lang}/${config.testament.ot}/${book.names[lang]}/1/`}
-              className="px-3 py-2.5 rounded-lg border border-[var(--border)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition text-sm font-sans"
-            >
-              {book.display[lang]}
-            </Link>
-          ))}
+          {otBooks.map((book) => renderBook(book, 'ot'))}
         </div>
       </section>
     </div>
