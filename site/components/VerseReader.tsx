@@ -13,6 +13,17 @@ interface Note {
   text: string;
 }
 
+interface ExpandedEntry {
+  verse: string;
+  title: string;
+  content: string;
+}
+
+interface ExpandedNoteSection {
+  category: string;
+  entries: ExpandedEntry[];
+}
+
 // Converte numero pra sobrescrito Unicode (1 → ¹, 23 → ²³)
 function toSuperscript(n: number): string {
   const map: Record<string, string> = {
@@ -22,12 +33,21 @@ function toSuperscript(n: number): string {
   return String(n).split('').map(c => map[c] || c).join('');
 }
 
+const CATEGORY_LABELS: Record<string, string> = {
+  'Linguística e Semântica': 'Linguística',
+  'Contexto Histórico-Cultural': 'Histórico',
+  'Crítica Textual': 'Textual',
+  'Teologia e Debate Acadêmico': 'Teologia',
+  'Referências Cruzadas e Intertextualidade': 'Referências',
+};
+
 function parseContent(markdown: string): { title: string; verses: Verse[]; notes: Note[] } {
   const lines = markdown.split('\n');
   let title = '';
   const verses: Verse[] = [];
   const notes: Note[] = [];
   let inNotes = false;
+  let inExpanded = false;
 
   for (const line of lines) {
     const trimmed = line.trim();
@@ -37,10 +57,18 @@ function parseContent(markdown: string): { title: string; verses: Verse[]; notes
       continue;
     }
 
-    if (trimmed === '## Notas' || trimmed === '## Notes') {
-      inNotes = true;
+    if (trimmed === '## Notas Expandidas' || trimmed === '## Expanded Notes') {
+      inExpanded = true;
       continue;
     }
+
+    if (trimmed === '## Notas' || trimmed === '## Notes') {
+      inNotes = true;
+      inExpanded = false;
+      continue;
+    }
+
+    if (inExpanded) continue;
 
     if (inNotes && trimmed.startsWith('- v.')) {
       const noteMatch = trimmed.match(/^- v\.(\S+?):\s*(.+)$/);
@@ -63,6 +91,71 @@ function parseContent(markdown: string): { title: string; verses: Verse[]; notes
   }
 
   return { title, verses, notes };
+}
+
+function parseExpandedNotes(markdown: string): ExpandedNoteSection[] {
+  const sections: ExpandedNoteSection[] = [];
+  const lines = markdown.split('\n');
+  let inExpanded = false;
+  let currentSection: ExpandedNoteSection | null = null;
+  let currentEntry: ExpandedEntry | null = null;
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+
+    if (trimmed === '## Notas Expandidas' || trimmed === '## Expanded Notes') {
+      inExpanded = true;
+      continue;
+    }
+
+    if (!inExpanded) continue;
+
+    // New top-level heading after expanded notes ends the section
+    if (trimmed.startsWith('## ') && !trimmed.startsWith('### ') && !trimmed.startsWith('#### ')) {
+      break;
+    }
+
+    // Category header: ### Linguística e Semântica
+    if (trimmed.startsWith('### ') && !trimmed.startsWith('#### ')) {
+      if (currentEntry && currentSection) {
+        currentSection.entries.push(currentEntry);
+        currentEntry = null;
+      }
+      if (currentSection) sections.push(currentSection);
+      currentSection = { category: trimmed.slice(4), entries: [] };
+      continue;
+    }
+
+    // Entry header: #### v.3 — ἄνωθεν (ánōthen)
+    if (trimmed.startsWith('#### ')) {
+      if (currentEntry && currentSection) {
+        currentSection.entries.push(currentEntry);
+      }
+      const entryTitle = trimmed.slice(5);
+      const verseMatch = entryTitle.match(/^v\.(\S+)/);
+      currentEntry = {
+        verse: verseMatch ? verseMatch[1] : '',
+        title: entryTitle,
+        content: '',
+      };
+      continue;
+    }
+
+    // Content lines within an entry
+    if (currentEntry && trimmed) {
+      currentEntry.content += (currentEntry.content ? '\n' : '') + trimmed;
+    }
+  }
+
+  // Flush remaining
+  if (currentEntry && currentSection) {
+    currentSection.entries.push(currentEntry);
+  }
+  if (currentSection && currentSection.entries.length > 0) {
+    sections.push(currentSection);
+  }
+
+  return sections;
 }
 
 function cleanText(text: string): string {
@@ -91,7 +184,9 @@ export default function VerseReader({
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [showNote, setShowNote] = useState<string | null>(null);
   const [readingMode, setReadingMode] = useState(false);
+  const [activeTab, setActiveTab] = useState<string>('resumo');
   const { title, verses, notes } = useMemo(() => parseContent(content), [content]);
+  const expandedSections = useMemo(() => parseExpandedNotes(content), [content]);
 
   const toggleVerse = (num: number) => {
     if (readingMode) return;
@@ -226,14 +321,58 @@ export default function VerseReader({
       {notes.length > 0 && (
         <>
           <hr />
-          <h2>Notas</h2>
-          <ul>
-            {notes.map((n, i) => (
-              <li key={i}>
-                <span className="font-medium text-[var(--note-tag)] font-sans">v.{n.verse}</span>: {n.text}
-              </li>
+          <div className="notes-tabs">
+            <button
+              onClick={() => setActiveTab('resumo')}
+              className={`notes-tab ${activeTab === 'resumo' ? 'active' : ''}`}
+            >
+              Resumo
+            </button>
+            {expandedSections.map((s) => (
+              <button
+                key={s.category}
+                onClick={() => setActiveTab(s.category)}
+                className={`notes-tab ${activeTab === s.category ? 'active' : ''}`}
+              >
+                {CATEGORY_LABELS[s.category] || s.category}
+              </button>
             ))}
-          </ul>
+          </div>
+
+          {activeTab === 'resumo' && (
+            <>
+              <h2>Notas</h2>
+              <ul>
+                {notes.map((n, i) => (
+                  <li key={i}>
+                    <span className="font-medium text-[var(--note-tag)] font-sans">v.{n.verse}</span>: {n.text}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {expandedSections.map((section) =>
+            activeTab === section.category ? (
+              <div key={section.category} className="expanded-notes">
+                <h2>{section.category}</h2>
+                {section.entries.map((entry, i) => (
+                  <div key={i} className="expanded-entry">
+                    <h3 className="expanded-entry-title">{entry.title}</h3>
+                    <div className="expanded-entry-content">
+                      {entry.content.split('\n').map((line, j) => (
+                        <p key={j} dangerouslySetInnerHTML={{
+                          __html: line
+                            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                            .replace(/\*(.+?)\*/g, '<em>$1</em>')
+                        }} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : null
+          )}
         </>
       )}
 

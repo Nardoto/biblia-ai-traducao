@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { BOOKS, LANG_CONFIG, LANGUAGES, findBook, type Language } from '@/lib/bible-data';
-import { getChapterContent, chapterExists } from '@/lib/markdown';
+import { getChapterContent, chapterExists, chainOfThoughtExists } from '@/lib/markdown';
 import DarkModeToggle from '@/components/DarkModeToggle';
 import VerseReader from '@/components/VerseReader';
+import ChapterTabNav from '@/components/ChapterTabNav';
 
 export function generateStaticParams() {
   const params: { lang: string; testament: string; book: string; chapter: string }[] = [];
@@ -110,6 +111,16 @@ export default function ChapterPage({
           );
         })}
       </div>
+
+      {/* Tab navigation */}
+      <ChapterTabNav
+        lang={lang}
+        testament={testament}
+        bookSlug={bookSlug}
+        chapter={chapter}
+        active="paraphrase"
+        hasChainOfThought={chainOfThoughtExists(lang, testamentKey, bookSlug, chapter)}
+      />
 
       {/* Content */}
       {content ? (

@@ -77,3 +77,56 @@ export function chapterExists(
     return false;
   }
 }
+
+export function getChainOfThoughtContent(
+  lang: Language,
+  testament: 'nt' | 'ot',
+  bookSlug: string,
+  chapter: number
+): string | null {
+  const testamentFolder = LANG_CONFIG[lang].testament[testament];
+  const chapterStr = chapter.toString().padStart(2, '0');
+  const filePath = path.join(
+    process.cwd(),
+    '..',
+    'parafrase',
+    lang,
+    'cadeia-de-pensamento',
+    testamentFolder,
+    bookSlug,
+    `${chapterStr}.md`
+  );
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    if (!content.trim()) return null;
+    return content;
+  } catch {
+    return null;
+  }
+}
+
+export function chainOfThoughtExists(
+  lang: Language,
+  testament: 'nt' | 'ot',
+  bookSlug: string,
+  chapter: number
+): boolean {
+  const testamentFolder = LANG_CONFIG[lang].testament[testament];
+  const chapterStr = chapter.toString().padStart(2, '0');
+  const filePath = path.join(
+    process.cwd(),
+    '..',
+    'parafrase',
+    lang,
+    'cadeia-de-pensamento',
+    testamentFolder,
+    bookSlug,
+    `${chapterStr}.md`
+  );
+  try {
+    const stat = fs.statSync(filePath);
+    return stat.size > 0;
+  } catch {
+    return false;
+  }
+}

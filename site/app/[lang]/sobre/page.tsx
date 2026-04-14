@@ -11,10 +11,12 @@ const content: Record<Language, {
   title: string;
   subtitle: string;
   whatIs: { title: string; body: string };
+  vision: { title: string; body: string };
   who: { title: string; body: string };
   why: { title: string; items: string[] };
   license: { title: string; body: string };
   contribute: { title: string; body: string };
+  roadmap: { title: string; items: string[] };
   regional: { title: string; body: string };
   methodLink: string;
   backLink: string;
@@ -25,6 +27,10 @@ const content: Record<Language, {
     whatIs: {
       title: 'O que é este projeto?',
       body: 'A Bíblia Livre AI é uma paráfrase da Bíblia criada inteiramente por inteligência artificial, a partir dos textos originais em grego (Novo Testamento) e hebraico (Antigo Testamento). Não é uma tradução palavra por palavra nem uma cópia de traduções existentes — é uma obra original que busca transmitir o significado e a emoção do texto bíblico em linguagem acessível e contemporânea.\n\nO projeto é um experimento de transparência radical: todo o processo de criação é documentado, aberto e verificável. Cada capítulo inclui notas detalhadas sobre as escolhas feitas, os termos originais consultados e o raciocínio por trás de cada decisão. Qualquer pessoa pode conferir, criticar, sugerir melhorias ou usar o texto livremente.',
+    },
+    vision: {
+      title: 'Visão do Projeto',
+      body: 'A Bíblia Livre AI é mais do que uma paráfrase — é um projeto comunitário e aberto que convida qualquer pessoa a participar. Nossa visão é criar a paráfrase bíblica mais acessível, transparente e verificável do mundo, em múltiplos idiomas, sob licença CC0 (domínio público).\n\nCada capítulo vem acompanhado de notas acadêmicas expandidas — com análise linguística do grego e hebraico, contexto histórico-cultural, crítica textual com evidência de manuscritos, debates teológicos contemporâneos e referências cruzadas. Além disso, a "Cadeia de Pensamento" documenta o raciocínio completo por trás de cada decisão de tradução.\n\nO objetivo é que qualquer pessoa — do leitor casual ao estudante de teologia — possa não apenas ler a Bíblia, mas entender por que cada palavra foi escolhida e verificar as fontes por conta própria.',
     },
     who: {
       title: 'Quem está por trás?',
@@ -46,7 +52,19 @@ const content: Record<Language, {
     },
     contribute: {
       title: 'Como contribuir',
-      body: 'Este é um projeto aberto para contribuição de qualquer pessoa. Você pode:\n\n• Reportar erros ou sugerir melhorias nos textos\n• Contribuir com paráfrases em novos idiomas\n• Ajudar a revisar notas e referências\n• Criar paráfrases regionais (nordestina, gaúcha, etc.)\n• Contribuir com o código do site\n\nTudo acontece no GitHub: github.com/Nardoto/biblia-ai-traducao',
+      body: 'Este é um projeto aberto para contribuição de qualquer pessoa — você não precisa saber grego ou hebraico para ajudar. Qualquer contribuição é bem-vinda:\n\n• Reportar erros de português, acentuação ou digitação\n• Sugerir melhorias na paráfrase de versículos específicos\n• Revisar e expandir as notas acadêmicas\n• Contribuir com paráfrases em novos idiomas\n• Criar paráfrases regionais (nordestina, gaúcha, etc.)\n• Contribuir com o código do site\n• Ajudar na verificação dos termos gregos e hebraicos\n\nComo participar pelo GitHub:\n\n1. Acesse github.com/Nardoto/biblia-ai-traducao\n2. Faça um fork do repositório\n3. Edite o arquivo do capítulo que quer melhorar\n4. Abra um Pull Request descrevendo sua sugestão\n\nOu simplesmente abra uma Issue descrevendo o erro ou sugestão. Toda contribuição será creditada.',
+    },
+    roadmap: {
+      title: 'Próximos passos',
+      items: [
+        'Completar todos os 27 livros do Novo Testamento em português',
+        'Notas acadêmicas expandidas com 5 categorias: linguística, histórico-cultural, crítica textual, teologia e referências cruzadas',
+        'Cadeia de pensamento: documentação completa do raciocínio por trás de cada decisão de tradução',
+        'Expansão para o Antigo Testamento a partir do hebraico bíblico',
+        'Paráfrases regionais (nordestina, gaúcha, mineira, etc.)',
+        'App mobile para leitura offline',
+        'API pública para integração com outros projetos',
+      ],
     },
     regional: {
       title: 'Paráfrases regionais',
@@ -61,6 +79,10 @@ const content: Record<Language, {
     whatIs: {
       title: 'What is this project?',
       body: 'Free Bible AI is a Bible paraphrase created entirely by artificial intelligence, working from the original texts in Greek (New Testament) and Hebrew (Old Testament). It is not a word-for-word translation nor a copy of existing translations — it is an original work that seeks to convey the meaning and emotion of the biblical text in accessible, contemporary language.\n\nThe project is an experiment in radical transparency: the entire creation process is documented, open, and verifiable. Each chapter includes detailed notes about the choices made, the original terms consulted, and the reasoning behind each decision. Anyone can verify, critique, suggest improvements, or freely use the text.',
+    },
+    vision: {
+      title: 'Project Vision',
+      body: 'Free Bible AI is more than a paraphrase — it\'s a community-driven, open project that invites anyone to participate. Our vision is to create the most accessible, transparent, and verifiable Bible paraphrase in the world, in multiple languages, under CC0 (public domain) license.\n\nEach chapter comes with expanded academic notes — linguistic analysis of Greek and Hebrew, historical-cultural context, textual criticism with manuscript evidence, contemporary theological debates, and cross-references. The "Chain of Thought" documents the complete reasoning behind every translation decision.\n\nThe goal is for anyone — from casual reader to theology student — to not only read the Bible, but understand why each word was chosen and verify the sources themselves.',
     },
     who: {
       title: 'Who is behind this?',
@@ -82,7 +104,19 @@ const content: Record<Language, {
     },
     contribute: {
       title: 'How to contribute',
-      body: 'This is an open project welcoming contributions from anyone. You can:\n\n• Report errors or suggest improvements to texts\n• Contribute paraphrases in new languages\n• Help review notes and references\n• Create regional paraphrases (Texan, Southern, etc.)\n• Contribute to the website code\n\nEverything happens on GitHub: github.com/Nardoto/biblia-ai-traducao',
+      body: 'This is an open project welcoming contributions from anyone — you don\'t need to know Greek or Hebrew to help. Any contribution is welcome:\n\n• Report typos or language errors\n• Suggest improvements to specific verses\n• Review and expand academic notes\n• Contribute paraphrases in new languages\n• Create regional paraphrases (Texan, Southern, etc.)\n• Contribute to the website code\n• Help verify Greek and Hebrew terms\n\nHow to participate on GitHub:\n\n1. Visit github.com/Nardoto/biblia-ai-traducao\n2. Fork the repository\n3. Edit the chapter file you want to improve\n4. Open a Pull Request describing your suggestion\n\nOr simply open an Issue describing the error or suggestion. All contributions will be credited.',
+    },
+    roadmap: {
+      title: 'What\'s next',
+      items: [
+        'Complete all 27 New Testament books in Portuguese',
+        'Expanded academic notes with 5 categories: linguistics, historical-cultural, textual criticism, theology, and cross-references',
+        'Chain of thought: complete documentation of reasoning behind every translation decision',
+        'Old Testament expansion from Biblical Hebrew',
+        'Regional paraphrases (Southern, Texan, etc.)',
+        'Mobile app for offline reading',
+        'Public API for integration with other projects',
+      ],
     },
     regional: {
       title: 'Regional paraphrases',
@@ -97,6 +131,10 @@ const content: Record<Language, {
     whatIs: {
       title: '¿Qué es este proyecto?',
       body: 'Biblia Libre AI es una paráfrasis de la Biblia creada enteramente por inteligencia artificial, a partir de los textos originales en griego (Nuevo Testamento) y hebreo (Antiguo Testamento). No es una traducción palabra por palabra ni una copia de traducciones existentes — es una obra original que busca transmitir el significado y la emoción del texto bíblico en lenguaje accesible y contemporáneo.\n\nEl proyecto es un experimento de transparencia radical: todo el proceso de creación está documentado, abierto y verificable. Cada capítulo incluye notas detalladas sobre las decisiones tomadas, los términos originales consultados y el razonamiento detrás de cada elección. Cualquier persona puede verificar, criticar, sugerir mejoras o usar el texto libremente.',
+    },
+    vision: {
+      title: 'Visión del Proyecto',
+      body: 'Biblia Libre AI es más que una paráfrasis — es un proyecto comunitario y abierto que invita a cualquier persona a participar. Nuestra visión es crear la paráfrasis bíblica más accesible, transparente y verificable del mundo, en múltiples idiomas, bajo licencia CC0 (dominio público).\n\nCada capítulo viene acompañado de notas académicas expandidas — con análisis lingüístico del griego y hebreo, contexto histórico-cultural, crítica textual con evidencia de manuscritos, debates teológicos contemporáneos y referencias cruzadas. La "Cadena de Pensamiento" documenta el razonamiento completo detrás de cada decisión de traducción.\n\nEl objetivo es que cualquier persona — del lector casual al estudiante de teología — pueda no solo leer la Biblia, sino entender por qué se eligió cada palabra y verificar las fuentes por cuenta propia.',
     },
     who: {
       title: '¿Quién está detrás?',
@@ -118,7 +156,19 @@ const content: Record<Language, {
     },
     contribute: {
       title: 'Cómo contribuir',
-      body: 'Este es un proyecto abierto a contribuciones de cualquier persona. Puedes:\n\n• Reportar errores o sugerir mejoras en los textos\n• Contribuir con paráfrasis en nuevos idiomas\n• Ayudar a revisar notas y referencias\n• Crear paráfrasis regionales (andaluza, mexicana, etc.)\n• Contribuir con el código del sitio\n\nTodo sucede en GitHub: github.com/Nardoto/biblia-ai-traducao',
+      body: 'Este es un proyecto abierto a contribuciones de cualquier persona — no necesitas saber griego ni hebreo para ayudar. Cualquier contribución es bienvenida:\n\n• Reportar errores de ortografía o acentuación\n• Sugerir mejoras en versículos específicos\n• Revisar y expandir las notas académicas\n• Contribuir con paráfrasis en nuevos idiomas\n• Crear paráfrasis regionales (andaluza, mexicana, etc.)\n• Contribuir con el código del sitio\n• Ayudar en la verificación de términos griegos y hebreos\n\nCómo participar en GitHub:\n\n1. Visita github.com/Nardoto/biblia-ai-traducao\n2. Haz un fork del repositorio\n3. Edita el archivo del capítulo que quieras mejorar\n4. Abre un Pull Request describiendo tu sugerencia\n\nO simplemente abre un Issue describiendo el error o sugerencia. Toda contribución será acreditada.',
+    },
+    roadmap: {
+      title: 'Próximos pasos',
+      items: [
+        'Completar los 27 libros del Nuevo Testamento en portugués',
+        'Notas académicas expandidas con 5 categorías: lingüística, histórico-cultural, crítica textual, teología y referencias cruzadas',
+        'Cadena de pensamiento: documentación completa del razonamiento detrás de cada decisión de traducción',
+        'Expansión al Antiguo Testamento desde el hebreo bíblico',
+        'Paráfrasis regionales (andaluza, mexicana, rioplatense, etc.)',
+        'App móvil para lectura sin conexión',
+        'API pública para integración con otros proyectos',
+      ],
     },
     regional: {
       title: 'Paráfrasis regionales',
@@ -156,6 +206,13 @@ export default function SobrePage({ params }: { params: { lang: Language } }) {
       </section>
 
       <section className="mb-10">
+        <h2 className="text-lg font-bold font-serif mb-3">{t.vision.title}</h2>
+        {t.vision.body.split('\n\n').map((p, i) => (
+          <p key={i} className="mb-4 leading-relaxed">{p}</p>
+        ))}
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-lg font-bold font-serif mb-3">{t.who.title}</h2>
         {t.who.body.split('\n\n').map((p, i) => (
           <p key={i} className="mb-4 leading-relaxed">{p}</p>
@@ -186,6 +243,18 @@ export default function SobrePage({ params }: { params: { lang: Language } }) {
         {t.contribute.body.split('\n\n').map((p, i) => (
           <p key={i} className="mb-4 leading-relaxed whitespace-pre-line">{p}</p>
         ))}
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-lg font-bold font-serif mb-3">{t.roadmap.title}</h2>
+        <ul className="space-y-3">
+          {t.roadmap.items.map((item, i) => (
+            <li key={i} className="flex gap-2 leading-relaxed">
+              <span className="text-[var(--accent)] mt-1 shrink-0">•</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mb-10">
