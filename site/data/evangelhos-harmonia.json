@@ -13,6 +13,7 @@
   "capitulos": [
     {
       "num": 1,
+      "slug": "01-prologos-nascimento",
       "titulo": "Prólogos e Nascimento",
       "subtitulo": "De antes do tempo até a fuga ao Egito",
       "total_cenas": 8,
@@ -149,6 +150,7 @@
     },
     {
       "num": 2,
+      "slug": "02-anos-ocultos",
       "titulo": "Anos Ocultos",
       "subtitulo": "Da infância ao batismo no Jordão",
       "total_cenas": 4,
@@ -249,6 +251,7 @@
     },
     {
       "num": 3,
+      "slug": "03-judeia-samaria",
       "titulo": "Início Discreto na Judeia",
       "subtitulo": "Primeiros sinais antes da Galileia",
       "total_cenas": 6,
@@ -359,6 +362,7 @@
     },
     {
       "num": 4,
+      "slug": "04-galileia-inicio",
       "titulo": "Galileia: o Início",
       "subtitulo": "Cafarnaum como base; primeiros milagres e chamados",
       "total_cenas": 13,
@@ -653,6 +657,7 @@
     },
     {
       "num": 5,
+      "slug": "05-sermao-monte",
       "titulo": "O Sermão e o Auge da Galileia",
       "subtitulo": "Os Doze, o Sermão do Monte, parábolas do Reino",
       "total_cenas": 14,
@@ -922,6 +927,7 @@
     },
     {
       "num": 6,
+      "slug": "06-parabolas-milagres",
       "titulo": "Parábolas e Milagres",
       "subtitulo": "O Reino em histórias; poder sobre tempestade, demônios e morte",
       "total_cenas": 12,
@@ -1192,6 +1198,7 @@
     },
     {
       "num": 7,
+      "slug": "07-paes-cesareia",
       "titulo": "Pão para Multidões e Confissão de Pedro",
       "subtitulo": "Sinais que polarizam; o ponto de virada em Cesareia",
       "total_cenas": 16,
@@ -1541,6 +1548,7 @@
     },
     {
       "num": 8,
+      "slug": "08-caminho-jerusalem",
       "titulo": "O Caminho a Jerusalém",
       "subtitulo": "Discípulos, samaritanos, parábolas pereanas; Lázaro",
       "total_cenas": 16,
@@ -1815,6 +1823,7 @@
     },
     {
       "num": 9,
+      "slug": "09-ultima-subida",
       "titulo": "Última Subida e Entrada em Jerusalém",
       "subtitulo": "Pereia, Jericó, Betânia, Domingo de Ramos",
       "total_cenas": 13,
@@ -2083,6 +2092,7 @@
     },
     {
       "num": 10,
+      "slug": "10-semana-no-templo",
       "titulo": "A Última Semana no Templo",
       "subtitulo": "Figueira, expulsão dos vendedores, debates e o Discurso das Oliveiras",
       "total_cenas": 17,
@@ -2457,6 +2467,7 @@
     },
     {
       "num": 11,
+      "slug": "11-paixao",
       "titulo": "Paixão",
       "subtitulo": "Conspiração, Última Ceia, Getsêmani, julgamentos, crucificação",
       "total_cenas": 26,
@@ -3056,6 +3067,7 @@
     },
     {
       "num": 12,
+      "slug": "12-ressurreicao-ascensao",
       "titulo": "Ressurreição e Ascensão",
       "subtitulo": "O túmulo vazio, aparições, comissão, subida ao céu",
       "total_cenas": 8,

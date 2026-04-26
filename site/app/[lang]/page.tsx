@@ -73,7 +73,7 @@ export default function LangHome({ params }: { params: { lang: Language } }) {
 
       {/* Bíblia Cronológica (beta) — destaque pra ser visível no celular */}
       <Link
-        href={`/${lang}/cronologica/evangelhos-mapa/`}
+        href={`/${lang}/cronologica/`}
         className="block mb-10 p-4 rounded-lg border border-[var(--accent-soft)] bg-[var(--accent-bg)] hover:border-[var(--accent)] hover:bg-[var(--accent-bg)]/70 transition group"
       >
         <div className="flex items-center justify-between">
@@ -95,10 +95,10 @@ export default function LangHome({ params }: { params: { lang: Language } }) {
             </h2>
             <p className="text-sm text-[var(--muted)] leading-snug">
               {lang === 'pt'
-                ? 'Mapa da fusão dos 4 evangelhos em construção — venha ver e opinar'
+                ? 'Capítulo 1 pronto: prólogos e nascimento de Jesus, com os 4 evangelhos fundidos numa só narrativa'
                 : lang === 'en'
-                  ? '4-gospel harmony map under construction — come see and review'
-                  : 'Mapa de la armonía de los 4 evangelios en construcción — ven a ver y opinar'}
+                  ? 'Chapter 1 ready: prologues and birth of Jesus, with the 4 gospels fused into one narrative'
+                  : 'Capítulo 1 listo: prólogos y nacimiento de Jesús, con los 4 evangelios fusionados en una sola narrativa'}
             </p>
           </div>
           <span className="text-[var(--accent)] text-xl group-hover:translate-x-0.5 transition">→</span>

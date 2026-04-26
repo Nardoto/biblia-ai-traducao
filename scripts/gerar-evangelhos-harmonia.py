@@ -31,6 +31,7 @@ OUTPUT = ROOT / "site" / "data" / "evangelhos-harmonia.json"
 
 CAPITULOS = [
     {
+        "slug": "01-prologos-nascimento",
         "titulo": "Prólogos e Nascimento",
         "subtitulo": "De antes do tempo até a fuga ao Egito",
         "cenas": [
@@ -57,6 +58,7 @@ CAPITULOS = [
         ],
     },
     {
+        "slug": "02-anos-ocultos",
         "titulo": "Anos Ocultos",
         "subtitulo": "Da infância ao batismo no Jordão",
         "cenas": [
@@ -76,6 +78,7 @@ CAPITULOS = [
         ],
     },
     {
+        "slug": "03-judeia-samaria",
         "titulo": "Início Discreto na Judeia",
         "subtitulo": "Primeiros sinais antes da Galileia",
         "cenas": [
@@ -97,6 +100,7 @@ CAPITULOS = [
         ],
     },
     {
+        "slug": "04-galileia-inicio",
         "titulo": "Galileia: o Início",
         "subtitulo": "Cafarnaum como base; primeiros milagres e chamados",
         "cenas": [
@@ -120,6 +124,7 @@ CAPITULOS = [
         ],
     },
     {
+        "slug": "05-sermao-monte",
         "titulo": "O Sermão e o Auge da Galileia",
         "subtitulo": "Os Doze, o Sermão do Monte, parábolas do Reino",
         "cenas": [
@@ -150,6 +155,7 @@ CAPITULOS = [
         ],
     },
     {
+        "slug": "06-parabolas-milagres",
         "titulo": "Parábolas e Milagres",
         "subtitulo": "O Reino em histórias; poder sobre tempestade, demônios e morte",
         "cenas": [
@@ -175,6 +181,7 @@ CAPITULOS = [
         ],
     },
     {
+        "slug": "07-paes-cesareia",
         "titulo": "Pão para Multidões e Confissão de Pedro",
         "subtitulo": "Sinais que polarizam; o ponto de virada em Cesareia",
         "cenas": [
@@ -204,6 +211,7 @@ CAPITULOS = [
         ],
     },
     {
+        "slug": "08-caminho-jerusalem",
         "titulo": "O Caminho a Jerusalém",
         "subtitulo": "Discípulos, samaritanos, parábolas pereanas; Lázaro",
         "cenas": [
@@ -231,6 +239,7 @@ CAPITULOS = [
         ],
     },
     {
+        "slug": "09-ultima-subida",
         "titulo": "Última Subida e Entrada em Jerusalém",
         "subtitulo": "Pereia, Jericó, Betânia, Domingo de Ramos",
         "cenas": [
@@ -261,6 +270,7 @@ CAPITULOS = [
         ],
     },
     {
+        "slug": "10-semana-no-templo",
         "titulo": "A Última Semana no Templo",
         "subtitulo": "Figueira, expulsão dos vendedores, debates e o Discurso das Oliveiras",
         "cenas": [
@@ -285,6 +295,7 @@ CAPITULOS = [
         ],
     },
     {
+        "slug": "11-paixao",
         "titulo": "Paixão",
         "subtitulo": "Conspiração, Última Ceia, Getsêmani, julgamentos, crucificação",
         "cenas": [
@@ -337,6 +348,7 @@ CAPITULOS = [
         ],
     },
     {
+        "slug": "12-ressurreicao-ascensao",
         "titulo": "Ressurreição e Ascensão",
         "subtitulo": "O túmulo vazio, aparições, comissão, subida ao céu",
         "cenas": [
@@ -402,6 +414,7 @@ def main():
 
         capitulos_out.append({
             "num": cap_num,
+            "slug": cap["slug"],
             "titulo": cap["titulo"],
             "subtitulo": cap["subtitulo"],
             "total_cenas": len(cenas_out),

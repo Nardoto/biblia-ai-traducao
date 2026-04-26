@@ -82,6 +82,9 @@ export default function LangLayout({
             {lang === 'pt' ? 'Cronológica' : lang === 'en' ? 'Chronological' : 'Cronológica'}
             <span className="ml-1.5 text-[10px] normal-case font-normal text-[var(--accent)]">beta</span>
           </h3>
+          <Link href={`/${lang}/cronologica/`} className="block text-sm hover:text-[var(--accent)] transition mb-1">
+            {lang === 'pt' ? 'Índice dos capítulos' : lang === 'en' ? 'Chapter index' : 'Índice de capítulos'}
+          </Link>
           <Link href={`/${lang}/cronologica/evangelhos-mapa/`} className="block text-sm hover:text-[var(--accent)] transition mb-1">
             {lang === 'pt' ? 'Mapa dos evangelhos' : lang === 'en' ? 'Gospel map' : 'Mapa de los evangelios'}
           </Link>
