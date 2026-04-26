@@ -71,6 +71,40 @@ export default function LangHome({ params }: { params: { lang: Language } }) {
 
       <h1 className="text-2xl font-bold mb-8 font-serif">{titles[lang]}</h1>
 
+      {/* Bíblia Cronológica (beta) — destaque pra ser visível no celular */}
+      <Link
+        href={`/${lang}/cronologica/evangelhos-mapa/`}
+        className="block mb-10 p-4 rounded-lg border border-[var(--accent-soft)] bg-[var(--accent-bg)] hover:border-[var(--accent)] hover:bg-[var(--accent-bg)]/70 transition group"
+      >
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xs font-sans font-bold uppercase tracking-wide text-[var(--accent)]">
+                {lang === 'pt' ? 'Novo' : lang === 'en' ? 'New' : 'Nuevo'}
+              </span>
+              <span className="text-[10px] font-sans uppercase tracking-wide text-[var(--muted)]">
+                beta
+              </span>
+            </div>
+            <h2 className="font-serif font-bold text-lg leading-tight mb-1">
+              {lang === 'pt'
+                ? 'Bíblia Cronológica'
+                : lang === 'en'
+                  ? 'Chronological Bible'
+                  : 'Biblia Cronológica'}
+            </h2>
+            <p className="text-sm text-[var(--muted)] leading-snug">
+              {lang === 'pt'
+                ? 'Mapa da fusão dos 4 evangelhos em construção — venha ver e opinar'
+                : lang === 'en'
+                  ? '4-gospel harmony map under construction — come see and review'
+                  : 'Mapa de la armonía de los 4 evangelios en construcción — ven a ver y opinar'}
+            </p>
+          </div>
+          <span className="text-[var(--accent)] text-xl group-hover:translate-x-0.5 transition">→</span>
+        </div>
+      </Link>
+
       {/* New Testament */}
       <section className="mb-10">
         <h2 className="text-xs font-sans font-bold uppercase tracking-wide text-[var(--muted)] mb-4 border-b border-[var(--border)] pb-2">
