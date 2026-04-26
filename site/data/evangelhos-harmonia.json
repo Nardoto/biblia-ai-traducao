@@ -1,0 +1,3223 @@
+{
+  "meta": {
+    "fonte_ordenacao": "khornberg/readingplans → oneyearchronological.json",
+    "fonte_harmonizacao": "A.T. Robertson, Harmony of the Gospels (1922, domínio público)",
+    "esquema": "Os 4 evangelhos fundidos em uma única narrativa cronológica",
+    "total_capitulos": 12,
+    "total_cenas": 153,
+    "total_pericopes_khornberg": 319,
+    "pericopes_usadas": 319,
+    "pericopes_nao_mapeadas": [],
+    "conflitos_aparentes_sinalizados": 21
+  },
+  "capitulos": [
+    {
+      "num": 1,
+      "titulo": "Prólogos e Nascimento",
+      "subtitulo": "De antes do tempo até a fuga ao Egito",
+      "total_cenas": 8,
+      "cenas": [
+        {
+          "id": 1,
+          "titulo": "Os quatro começos",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "1:1",
+              "ref_completa": "Marcos 1:1",
+              "idx_origem": 707
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "1:1-4",
+              "ref_completa": "Lucas 1:1-4",
+              "idx_origem": 708
+            },
+            {
+              "evangelho": "João",
+              "ref": "1:1-18",
+              "ref_completa": "João 1:1-18",
+              "idx_origem": 709
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Cada evangelho abre de um ângulo diferente: Marcos vai direto ao ponto, Lucas escreve a Teófilo como historiador, João recua à eternidade. Vamos manter os três começos lado a lado, como quatro vozes em coro."
+        },
+        {
+          "id": 2,
+          "titulo": "As duas genealogias de Jesus",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "1:1-17",
+              "ref_completa": "Mateus 1:1-17",
+              "idx_origem": 710
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "3:23-38",
+              "ref_completa": "Lucas 3:23-38",
+              "idx_origem": 711
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Mateus traça a linhagem de Abraão a Jesus passando por Davi e Salomão (linha real). Lucas traça de Jesus até Adão passando por Davi e Natã (linha sacerdotal/humana). Apresentar as duas em paralelo, com nota sobre as divergências.",
+          "conflito_aparente": "Genealogias com nomes diferentes entre Davi e José — explicar as duas leituras tradicionais"
+        },
+        {
+          "id": 3,
+          "titulo": "O anúncio a Zacarias",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "1:5-38",
+              "ref_completa": "Lucas 1:5-38",
+              "idx_origem": 712
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 4,
+          "titulo": "O anúncio a Maria",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "1:5-38",
+              "ref_completa": "Lucas 1:5-38",
+              "idx_origem": 712
+            }
+          ],
+          "base": "Lucas",
+          "nota_editorial": "Mesma perícope de Lc 1:5-38 — separar editorialmente em duas cenas (Zacarias / Maria)."
+        },
+        {
+          "id": 5,
+          "titulo": "Maria visita Isabel; nasce João Batista",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "1:39-80",
+              "ref_completa": "Lucas 1:39-80",
+              "idx_origem": 713
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 6,
+          "titulo": "O anúncio a José",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "1:18-25",
+              "ref_completa": "Mateus 1:18-25",
+              "idx_origem": 714
+            }
+          ],
+          "base": "Mateus"
+        },
+        {
+          "id": 7,
+          "titulo": "Nascimento em Belém; pastores; apresentação no templo",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "2:1-40",
+              "ref_completa": "Lucas 2:1-40",
+              "idx_origem": 715
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 8,
+          "titulo": "Os magos do oriente; fuga ao Egito; volta a Nazaré",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "2:1-23",
+              "ref_completa": "Mateus 2:1-23",
+              "idx_origem": 716
+            }
+          ],
+          "base": "Mateus",
+          "nota_editorial": "Mateus é a única fonte para magos, fuga e massacre dos inocentes. Lucas não menciona — vamos posicionar essa cena depois da apresentação no templo (Lc 2:39 fala em volta a Nazaré sem mencionar o desvio pelo Egito; harmonização tradicional encaixa Mateus aqui).",
+          "conflito_aparente": "Lucas vs. Mateus: ordem entre apresentação no templo e fuga ao Egito"
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "titulo": "Anos Ocultos",
+      "subtitulo": "Da infância ao batismo no Jordão",
+      "total_cenas": 4,
+      "cenas": [
+        {
+          "id": 9,
+          "titulo": "Jesus aos 12 anos no templo",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "2:41-52",
+              "ref_completa": "Lucas 2:41-52",
+              "idx_origem": 717
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 10,
+          "titulo": "João Batista pregando no deserto",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "1:2-8",
+              "ref_completa": "Marcos 1:2-8",
+              "idx_origem": 718
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "3:1-12",
+              "ref_completa": "Mateus 3:1-12",
+              "idx_origem": 719
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "3:1-18",
+              "ref_completa": "Lucas 3:1-18",
+              "idx_origem": 720
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Os 3 sinóticos descrevem a pregação de João. Marcos é o mais curto, Lucas o mais detalhado (com pregação a soldados e cobradores). Fundir tudo."
+        },
+        {
+          "id": 11,
+          "titulo": "Jesus é batizado por João",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "1:9-11",
+              "ref_completa": "Marcos 1:9-11",
+              "idx_origem": 721
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "3:13-17",
+              "ref_completa": "Mateus 3:13-17",
+              "idx_origem": 722
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "3:21-22",
+              "ref_completa": "Lucas 3:21-22",
+              "idx_origem": 723
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Os 3 sinóticos contam — fundir em um só relato. João Evangelista não narra diretamente o batismo, mas alude (Jo 1:32-34) — vamos integrar essa alusão."
+        },
+        {
+          "id": 12,
+          "titulo": "Tentação no deserto",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "1:12-13",
+              "ref_completa": "Marcos 1:12-13",
+              "idx_origem": 724
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "4:1-11",
+              "ref_completa": "Mateus 4:1-11",
+              "idx_origem": 725
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "4:1-15",
+              "ref_completa": "Lucas 4:1-15",
+              "idx_origem": 726
+            }
+          ],
+          "base": "Mateus",
+          "nota_editorial": "Marcos resume em 2 versículos. Mateus e Lucas detalham as 3 tentações em ORDENS DIFERENTES (Mt: pão→templo→reinos; Lc: pão→reinos→templo). Vamos seguir a ordem de Mateus por ser o relato mais antigo na tradição lectionária, com nota sobre a divergência.",
+          "conflito_aparente": "Ordem das tentações difere entre Mt e Lc"
+        }
+      ]
+    },
+    {
+      "num": 3,
+      "titulo": "Início Discreto na Judeia",
+      "subtitulo": "Primeiros sinais antes da Galileia",
+      "total_cenas": 6,
+      "cenas": [
+        {
+          "id": 13,
+          "titulo": "Testemunho de João Batista; chamado dos primeiros discípulos",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "1:19–2:25",
+              "ref_completa": "João 1:19–2:25",
+              "idx_origem": 727
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 14,
+          "titulo": "Casamento em Caná; primeira purificação do templo",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "1:19–2:25",
+              "ref_completa": "João 1:19–2:25",
+              "idx_origem": 727
+            }
+          ],
+          "base": "João",
+          "nota_editorial": "Mesma perícope (Jo 1:19–2:25) — separar em duas cenas para clareza narrativa.",
+          "conflito_aparente": "João põe a purificação do templo NO INÍCIO; sinóticos põem na última semana. Tradição majoritária: foram dois eventos distintos."
+        },
+        {
+          "id": 15,
+          "titulo": "Nicodemos; mais sobre João Batista; mulher samaritana",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "3:1–4:45",
+              "ref_completa": "João 3:1–4:45",
+              "idx_origem": 728
+            }
+          ],
+          "base": "João",
+          "nota_editorial": "Bloco contínuo de João 3-4. Conversas-chave do início do ministério."
+        },
+        {
+          "id": 16,
+          "titulo": "João Batista é preso; Jesus volta para a Galileia",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "3:19-20",
+              "ref_completa": "Lucas 3:19-20",
+              "idx_origem": 729
+            },
+            {
+              "evangelho": "Marcos",
+              "ref": "1:14-15",
+              "ref_completa": "Marcos 1:14-15",
+              "idx_origem": 730
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "4:12-17",
+              "ref_completa": "Mateus 4:12-17",
+              "idx_origem": 731
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "3:23",
+              "ref_completa": "Lucas 3:23",
+              "idx_origem": 732
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Lc 3:19-20 marca a prisão; Mc/Mt marcam a transição para a Galileia."
+        },
+        {
+          "id": 17,
+          "titulo": "Cura do filho do funcionário (segundo sinal em Caná)",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "4:46-54",
+              "ref_completa": "João 4:46-54",
+              "idx_origem": 733
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 18,
+          "titulo": "Rejeição em Nazaré (primeira visita)",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "4:16-30",
+              "ref_completa": "Lucas 4:16-30",
+              "idx_origem": 734
+            }
+          ],
+          "base": "Lucas",
+          "nota_editorial": "Lucas conta uma rejeição em Nazaré logo no início (Lc 4:16-30). Mateus e Marcos contam outra rejeição depois (cena em Mc 6 / Mt 13). Tradição harmonizadora: foram duas visitas distintas.",
+          "conflito_aparente": "Rejeição em Nazaré — Lucas no início, Mc/Mt depois"
+        }
+      ]
+    },
+    {
+      "num": 4,
+      "titulo": "Galileia: o Início",
+      "subtitulo": "Cafarnaum como base; primeiros milagres e chamados",
+      "total_cenas": 13,
+      "cenas": [
+        {
+          "id": 19,
+          "titulo": "Chamado dos quatro pescadores",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "1:16-20",
+              "ref_completa": "Marcos 1:16-20",
+              "idx_origem": 735
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "4:18-22",
+              "ref_completa": "Mateus 4:18-22",
+              "idx_origem": 736
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 20,
+          "titulo": "Endemoninhado na sinagoga de Cafarnaum",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "1:21-28",
+              "ref_completa": "Marcos 1:21-28",
+              "idx_origem": 737
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "4:31-37",
+              "ref_completa": "Lucas 4:31-37",
+              "idx_origem": 738
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 21,
+          "titulo": "Cura da sogra de Pedro e muitos doentes ao entardecer",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "1:29-34",
+              "ref_completa": "Marcos 1:29-34",
+              "idx_origem": 739
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "8:14-17",
+              "ref_completa": "Mateus 8:14-17",
+              "idx_origem": 740
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "4:38-41",
+              "ref_completa": "Lucas 4:38-41",
+              "idx_origem": 741
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 22,
+          "titulo": "Primeira viagem missionária pela Galileia",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "1:35-39",
+              "ref_completa": "Marcos 1:35-39",
+              "idx_origem": 742
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "4:42-44",
+              "ref_completa": "Lucas 4:42-44",
+              "idx_origem": 743
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "4:23-25",
+              "ref_completa": "Mateus 4:23-25",
+              "idx_origem": 744
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 23,
+          "titulo": "Pesca milagrosa e chamado completo de Pedro, Tiago e João",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "5:1-11",
+              "ref_completa": "Lucas 5:1-11",
+              "idx_origem": 745
+            }
+          ],
+          "base": "Lucas",
+          "nota_editorial": "Só Lucas narra. Tradição: complementa a cena em Mc 1:16-20 / Mt 4:18-22 (ali era o convite inicial; aqui é a confirmação após o milagre)."
+        },
+        {
+          "id": 24,
+          "titulo": "Cura de um leproso",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "1:40-45",
+              "ref_completa": "Marcos 1:40-45",
+              "idx_origem": 746
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "8:1-4",
+              "ref_completa": "Mateus 8:1-4",
+              "idx_origem": 747
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "5:12-16",
+              "ref_completa": "Lucas 5:12-16",
+              "idx_origem": 748
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 25,
+          "titulo": "Cura do paralítico descido pelo telhado",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "2:1-12",
+              "ref_completa": "Marcos 2:1-12",
+              "idx_origem": 749
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "9:1-8",
+              "ref_completa": "Mateus 9:1-8",
+              "idx_origem": 750
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "5:17-26",
+              "ref_completa": "Lucas 5:17-26",
+              "idx_origem": 751
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 26,
+          "titulo": "Chamado de Levi (Mateus); jantar com pecadores",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "2:13-17",
+              "ref_completa": "Marcos 2:13-17",
+              "idx_origem": 752
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "9:9-13",
+              "ref_completa": "Mateus 9:9-13",
+              "idx_origem": 753
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "5:27-32",
+              "ref_completa": "Lucas 5:27-32",
+              "idx_origem": 754
+            }
+          ],
+          "base": "Marcos",
+          "nota_editorial": "Mateus se identifica como o convidado (Mt 9:9). Marcos e Lucas chamam de Levi.",
+          "conflito_aparente": "Mateus = Levi (mesma pessoa, dois nomes)"
+        },
+        {
+          "id": 27,
+          "titulo": "Pergunta sobre o jejum; remendo novo, vinho novo",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "2:18-22",
+              "ref_completa": "Marcos 2:18-22",
+              "idx_origem": 755
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "9:14-17",
+              "ref_completa": "Mateus 9:14-17",
+              "idx_origem": 756
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "5:33-39",
+              "ref_completa": "Lucas 5:33-39",
+              "idx_origem": 757
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 28,
+          "titulo": "Cura na piscina de Betesda",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "5:1-47",
+              "ref_completa": "João 5:1-47",
+              "idx_origem": 758
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 29,
+          "titulo": "Discípulos colhem trigo no sábado",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "2:23-28",
+              "ref_completa": "Marcos 2:23-28",
+              "idx_origem": 759
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "12:1-8",
+              "ref_completa": "Mateus 12:1-8",
+              "idx_origem": 760
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "6:1-5",
+              "ref_completa": "Lucas 6:1-5",
+              "idx_origem": 761
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 30,
+          "titulo": "Cura do homem da mão atrofiada (sábado)",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "3:1-6",
+              "ref_completa": "Marcos 3:1-6",
+              "idx_origem": 762
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "12:9-14",
+              "ref_completa": "Mateus 12:9-14",
+              "idx_origem": 763
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "6:6-11",
+              "ref_completa": "Lucas 6:6-11",
+              "idx_origem": 764
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 31,
+          "titulo": "Multidões seguem Jesus; ele se retira",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "12:15-21",
+              "ref_completa": "Mateus 12:15-21",
+              "idx_origem": 765
+            },
+            {
+              "evangelho": "Marcos",
+              "ref": "3:7-19",
+              "ref_completa": "Marcos 3:7-19",
+              "idx_origem": 766
+            }
+          ],
+          "base": "fusão"
+        }
+      ]
+    },
+    {
+      "num": 5,
+      "titulo": "O Sermão e o Auge da Galileia",
+      "subtitulo": "Os Doze, o Sermão do Monte, parábolas do Reino",
+      "total_cenas": 14,
+      "cenas": [
+        {
+          "id": 32,
+          "titulo": "Escolha dos Doze apóstolos",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "3:7-19",
+              "ref_completa": "Marcos 3:7-19",
+              "idx_origem": 766
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "6:12-16",
+              "ref_completa": "Lucas 6:12-16",
+              "idx_origem": 767
+            }
+          ],
+          "base": "Marcos",
+          "nota_editorial": "Marcos lista os 12 em 3:13-19; Lucas em 6:12-16. Pequenas variações de nome."
+        },
+        {
+          "id": 33,
+          "titulo": "Bem-aventuranças",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "5:1-12",
+              "ref_completa": "Mateus 5:1-12",
+              "idx_origem": 768
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "6:17-26",
+              "ref_completa": "Lucas 6:17-26",
+              "idx_origem": 769
+            }
+          ],
+          "base": "Mateus",
+          "nota_editorial": "Mateus tem 9 bem-aventuranças (no monte). Lucas tem 4 + 4 'ais' (na planície). Tradição harmonizadora: o sermão foi pregado mais de uma vez, ou Lc resume Mt. Vamos seguir a versão de Mateus (mais completa) e integrar os 'ais' de Lucas.",
+          "conflito_aparente": "Sermão do Monte (Mt) vs. Sermão da Planície (Lc)"
+        },
+        {
+          "id": 34,
+          "titulo": "Sal da terra, luz do mundo, lei e profetas",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "5:13-48",
+              "ref_completa": "Mateus 5:13-48",
+              "idx_origem": 770
+            }
+          ],
+          "base": "Mateus"
+        },
+        {
+          "id": 35,
+          "titulo": "Esmola, oração e jejum em segredo; Pai-Nosso",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "6:27-36",
+              "ref_completa": "Lucas 6:27-36",
+              "idx_origem": 771
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "6:1-4",
+              "ref_completa": "Mateus 6:1-4",
+              "idx_origem": 772
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "6:5–7:6",
+              "ref_completa": "Mateus 6:5–7:6",
+              "idx_origem": 773
+            }
+          ],
+          "base": "Mateus",
+          "nota_editorial": "Mt 6 tem o Pai-Nosso aqui; Lc 11 tem em outro contexto. Manter os dois."
+        },
+        {
+          "id": 36,
+          "titulo": "Pedir, buscar, bater; árvore e frutos",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "6:37-42",
+              "ref_completa": "Lucas 6:37-42",
+              "idx_origem": 774
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "7:7-20",
+              "ref_completa": "Mateus 7:7-20",
+              "idx_origem": 775
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "6:43-45",
+              "ref_completa": "Lucas 6:43-45",
+              "idx_origem": 776
+            }
+          ],
+          "base": "Mateus"
+        },
+        {
+          "id": 37,
+          "titulo": "Casa sobre a rocha; fim do sermão",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "7:21-29",
+              "ref_completa": "Mateus 7:21-29",
+              "idx_origem": 777
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "6:46-49",
+              "ref_completa": "Lucas 6:46-49",
+              "idx_origem": 778
+            }
+          ],
+          "base": "Mateus"
+        },
+        {
+          "id": 38,
+          "titulo": "Cura do servo do centurião",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "8:5-13",
+              "ref_completa": "Mateus 8:5-13",
+              "idx_origem": 779
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "7:1-17",
+              "ref_completa": "Lucas 7:1-17",
+              "idx_origem": 780
+            }
+          ],
+          "base": "Lucas",
+          "nota_editorial": "Lucas tem mais detalhes (mensageiros judeus). Usar Lucas como base."
+        },
+        {
+          "id": 39,
+          "titulo": "Ressurreição do filho da viúva de Naim",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "7:1-17",
+              "ref_completa": "Lucas 7:1-17",
+              "idx_origem": 780
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 40,
+          "titulo": "João Batista manda perguntar; Jesus elogia João",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "11:1-19",
+              "ref_completa": "Mateus 11:1-19",
+              "idx_origem": 781
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "7:18-35",
+              "ref_completa": "Lucas 7:18-35",
+              "idx_origem": 782
+            }
+          ],
+          "base": "Mateus"
+        },
+        {
+          "id": 41,
+          "titulo": "Jesus condena cidades incrédulas; convite aos cansados",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "11:20-30",
+              "ref_completa": "Mateus 11:20-30",
+              "idx_origem": 783
+            }
+          ],
+          "base": "Mateus"
+        },
+        {
+          "id": 42,
+          "titulo": "Mulher pecadora unge os pés de Jesus na casa de Simão",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "7:36-50",
+              "ref_completa": "Lucas 7:36-50",
+              "idx_origem": 784
+            }
+          ],
+          "base": "Lucas",
+          "nota_editorial": "Distinta da unção em Betânia (que vem na última semana). Aqui é uma pecadora anônima na casa de um fariseu na Galileia.",
+          "conflito_aparente": "NÃO confundir com unção em Betânia — são duas mulheres e dois eventos diferentes"
+        },
+        {
+          "id": 43,
+          "titulo": "As mulheres que seguiam Jesus",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "8:1-3",
+              "ref_completa": "Lucas 8:1-3",
+              "idx_origem": 785
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 44,
+          "titulo": "Acusação dos escribas; Jesus e Belzebu; pecado contra o Espírito",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "3:20-30",
+              "ref_completa": "Marcos 3:20-30",
+              "idx_origem": 786
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "12:22-45",
+              "ref_completa": "Mateus 12:22-45",
+              "idx_origem": 787
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 45,
+          "titulo": "A verdadeira família de Jesus",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "3:31-35",
+              "ref_completa": "Marcos 3:31-35",
+              "idx_origem": 788
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "12:46-50",
+              "ref_completa": "Mateus 12:46-50",
+              "idx_origem": 789
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "8:19-21",
+              "ref_completa": "Lucas 8:19-21",
+              "idx_origem": 790
+            }
+          ],
+          "base": "Marcos"
+        }
+      ]
+    },
+    {
+      "num": 6,
+      "titulo": "Parábolas e Milagres",
+      "subtitulo": "O Reino em histórias; poder sobre tempestade, demônios e morte",
+      "total_cenas": 12,
+      "cenas": [
+        {
+          "id": 46,
+          "titulo": "Parábola do semeador (e sua explicação)",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "4:1-9",
+              "ref_completa": "Marcos 4:1-9",
+              "idx_origem": 791
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "13:1-9",
+              "ref_completa": "Mateus 13:1-9",
+              "idx_origem": 792
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "8:4-8",
+              "ref_completa": "Lucas 8:4-8",
+              "idx_origem": 793
+            },
+            {
+              "evangelho": "Marcos",
+              "ref": "4:10-20",
+              "ref_completa": "Marcos 4:10-20",
+              "idx_origem": 794
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "13:10-23",
+              "ref_completa": "Mateus 13:10-23",
+              "idx_origem": 795
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "8:9-18",
+              "ref_completa": "Lucas 8:9-18",
+              "idx_origem": 796
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 47,
+          "titulo": "Lâmpada, semente que cresce sozinha, joio",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "4:21-29",
+              "ref_completa": "Marcos 4:21-29",
+              "idx_origem": 797
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "13:24-30",
+              "ref_completa": "Mateus 13:24-30",
+              "idx_origem": 798
+            }
+          ],
+          "base": "fusão"
+        },
+        {
+          "id": 48,
+          "titulo": "Grão de mostarda, fermento, e outras parábolas do Reino",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "4:30-34",
+              "ref_completa": "Marcos 4:30-34",
+              "idx_origem": 799
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "13:31-52",
+              "ref_completa": "Mateus 13:31-52",
+              "idx_origem": 800
+            }
+          ],
+          "base": "fusão"
+        },
+        {
+          "id": 49,
+          "titulo": "Acalma a tempestade",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "4:35-41",
+              "ref_completa": "Marcos 4:35-41",
+              "idx_origem": 801
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "8:23-27",
+              "ref_completa": "Mateus 8:23-27",
+              "idx_origem": 802
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "8:22-25",
+              "ref_completa": "Lucas 8:22-25",
+              "idx_origem": 803
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 50,
+          "titulo": "Endemoninhado(s) e os porcos em Gerasa/Gadara",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "5:1-20",
+              "ref_completa": "Marcos 5:1-20",
+              "idx_origem": 804
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "8:28-34",
+              "ref_completa": "Mateus 8:28-34",
+              "idx_origem": 805
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "8:26-39",
+              "ref_completa": "Lucas 8:26-39",
+              "idx_origem": 806
+            }
+          ],
+          "base": "Marcos",
+          "nota_editorial": "Marcos e Lucas falam de UM endemoninhado em Gerasa/Gerasenos. Mateus fala de DOIS endemoninhados em Gadara/Gadarenos. Harmonização tradicional: havia dois, mas um era tão dominante que Mc/Lc focam só nele; Gerasa e Gadara estavam na mesma região.",
+          "conflito_aparente": "Um demoníaco (Mc/Lc) ou dois (Mt)? Gerasa ou Gadara?"
+        },
+        {
+          "id": 51,
+          "titulo": "Jairo pede pela filha; mulher com hemorragia; ressurreição da menina",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "5:21-43",
+              "ref_completa": "Marcos 5:21-43",
+              "idx_origem": 807
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "9:18-26",
+              "ref_completa": "Mateus 9:18-26",
+              "idx_origem": 808
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "8:40-56",
+              "ref_completa": "Lucas 8:40-56",
+              "idx_origem": 809
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 52,
+          "titulo": "Cura de dois cegos e um mudo endemoninhado",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "9:27-34",
+              "ref_completa": "Mateus 9:27-34",
+              "idx_origem": 810
+            }
+          ],
+          "base": "Mateus"
+        },
+        {
+          "id": 53,
+          "titulo": "Segunda rejeição em Nazaré",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "6:1-6",
+              "ref_completa": "Marcos 6:1-6",
+              "idx_origem": 811
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "13:53-58",
+              "ref_completa": "Mateus 13:53-58",
+              "idx_origem": 812
+            }
+          ],
+          "base": "Marcos",
+          "nota_editorial": "Esta é a rejeição contada por Mc/Mt (distinta da de Lc 4 no início)."
+        },
+        {
+          "id": 54,
+          "titulo": "Compaixão pelas multidões",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "9:35-38",
+              "ref_completa": "Mateus 9:35-38",
+              "idx_origem": 813
+            }
+          ],
+          "base": "Mateus"
+        },
+        {
+          "id": 55,
+          "titulo": "Envio dos Doze em missão",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "6:7-13",
+              "ref_completa": "Marcos 6:7-13",
+              "idx_origem": 814
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "10:1-42",
+              "ref_completa": "Mateus 10:1-42",
+              "idx_origem": 815
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "9:1-6",
+              "ref_completa": "Lucas 9:1-6",
+              "idx_origem": 816
+            }
+          ],
+          "base": "Marcos",
+          "nota_editorial": "Mateus 10 traz um discurso longo de instruções; Mc/Lc resumem."
+        },
+        {
+          "id": 56,
+          "titulo": "Herodes ouve falar de Jesus",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "9:7-9",
+              "ref_completa": "Lucas 9:7-9",
+              "idx_origem": 817
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 57,
+          "titulo": "Morte de João Batista (flashback)",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "6:14-29",
+              "ref_completa": "Marcos 6:14-29",
+              "idx_origem": 818
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "14:1-21",
+              "ref_completa": "Mateus 14:1-21",
+              "idx_origem": 819
+            }
+          ],
+          "base": "Marcos"
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "titulo": "Pão para Multidões e Confissão de Pedro",
+      "subtitulo": "Sinais que polarizam; o ponto de virada em Cesareia",
+      "total_cenas": 16,
+      "cenas": [
+        {
+          "id": 58,
+          "titulo": "Multiplicação dos pães e peixes para 5 mil",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "14:1-21",
+              "ref_completa": "Mateus 14:1-21",
+              "idx_origem": 819
+            },
+            {
+              "evangelho": "Marcos",
+              "ref": "6:30-44",
+              "ref_completa": "Marcos 6:30-44",
+              "idx_origem": 820
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "9:10-17",
+              "ref_completa": "Lucas 9:10-17",
+              "idx_origem": 821
+            },
+            {
+              "evangelho": "João",
+              "ref": "6:1-15",
+              "ref_completa": "João 6:1-15",
+              "idx_origem": 822
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Único milagre nos 4 evangelhos. Fundir as quatro versões."
+        },
+        {
+          "id": 59,
+          "titulo": "Jesus anda sobre as águas",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "6:45-52",
+              "ref_completa": "Marcos 6:45-52",
+              "idx_origem": 823
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "14:22-33",
+              "ref_completa": "Mateus 14:22-33",
+              "idx_origem": 824
+            },
+            {
+              "evangelho": "João",
+              "ref": "6:16-21",
+              "ref_completa": "João 6:16-21",
+              "idx_origem": 825
+            }
+          ],
+          "base": "Mateus",
+          "nota_editorial": "Só Mateus traz Pedro tentando andar sobre as águas. Integrar."
+        },
+        {
+          "id": 60,
+          "titulo": "Curas em Genesaré",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "6:53-56",
+              "ref_completa": "Marcos 6:53-56",
+              "idx_origem": 826
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "14:34-36",
+              "ref_completa": "Mateus 14:34-36",
+              "idx_origem": 827
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 61,
+          "titulo": "Discurso do Pão da Vida em Cafarnaum",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "6:22-71",
+              "ref_completa": "João 6:22-71",
+              "idx_origem": 828
+            }
+          ],
+          "base": "João",
+          "nota_editorial": "Sequência longa de João 6:22-71. O ponto em que muitos discípulos abandonam Jesus."
+        },
+        {
+          "id": 62,
+          "titulo": "Discussão sobre tradição dos anciãos e o que contamina",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "7:1-23",
+              "ref_completa": "Marcos 7:1-23",
+              "idx_origem": 829
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "15:1-20",
+              "ref_completa": "Mateus 15:1-20",
+              "idx_origem": 830
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 63,
+          "titulo": "A mulher siro-fenícia (cananeia)",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "7:24-30",
+              "ref_completa": "Marcos 7:24-30",
+              "idx_origem": 831
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "15:21-28",
+              "ref_completa": "Mateus 15:21-28",
+              "idx_origem": 832
+            }
+          ],
+          "base": "Marcos",
+          "nota_editorial": "Mc chama de siro-fenícia, Mt de cananeia. Termos sinônimos para o mesmo grupo."
+        },
+        {
+          "id": 64,
+          "titulo": "Cura do surdo-gago em Decápolis e outras curas",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "7:31-37",
+              "ref_completa": "Marcos 7:31-37",
+              "idx_origem": 833
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "15:29-31",
+              "ref_completa": "Mateus 15:29-31",
+              "idx_origem": 834
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 65,
+          "titulo": "Multiplicação dos pães para 4 mil",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "8:1-10",
+              "ref_completa": "Marcos 8:1-10",
+              "idx_origem": 835
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "15:32–16:4",
+              "ref_completa": "Mateus 15:32–16:4",
+              "idx_origem": 836
+            }
+          ],
+          "base": "Marcos",
+          "nota_editorial": "DIFERENTE da multiplicação para 5 mil (cf. Mc 8:18-21)."
+        },
+        {
+          "id": 66,
+          "titulo": "Fariseus pedem sinal; cuidado com o fermento dos fariseus",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "8:11-21",
+              "ref_completa": "Marcos 8:11-21",
+              "idx_origem": 837
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "16:5-12",
+              "ref_completa": "Mateus 16:5-12",
+              "idx_origem": 838
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 67,
+          "titulo": "Cura do cego em Betsaida",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "8:22-30",
+              "ref_completa": "Marcos 8:22-30",
+              "idx_origem": 839
+            }
+          ],
+          "base": "Marcos",
+          "nota_editorial": "Cura única de Marcos: feita em duas etapas (visão parcial → visão completa)."
+        },
+        {
+          "id": 68,
+          "titulo": "Confissão de Pedro em Cesareia de Filipe",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "8:22-30",
+              "ref_completa": "Marcos 8:22-30",
+              "idx_origem": 839
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "16:13-20",
+              "ref_completa": "Mateus 16:13-20",
+              "idx_origem": 840
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "9:18-20",
+              "ref_completa": "Lucas 9:18-20",
+              "idx_origem": 841
+            }
+          ],
+          "base": "Mateus",
+          "nota_editorial": "Mt traz o famoso 'tu és Pedro, e sobre esta pedra...'."
+        },
+        {
+          "id": 69,
+          "titulo": "Primeira predição da paixão; carregar a cruz",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "8:31–9:1",
+              "ref_completa": "Marcos 8:31–9:1",
+              "idx_origem": 842
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "16:21-28",
+              "ref_completa": "Mateus 16:21-28",
+              "idx_origem": 843
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "9:21-27",
+              "ref_completa": "Lucas 9:21-27",
+              "idx_origem": 844
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 70,
+          "titulo": "Transfiguração",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "9:2-13",
+              "ref_completa": "Marcos 9:2-13",
+              "idx_origem": 845
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "17:1-13",
+              "ref_completa": "Mateus 17:1-13",
+              "idx_origem": 846
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "9:28-36",
+              "ref_completa": "Lucas 9:28-36",
+              "idx_origem": 847
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 71,
+          "titulo": "Cura do menino endemoninhado",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "9:14-29",
+              "ref_completa": "Marcos 9:14-29",
+              "idx_origem": 848
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "17:14-21",
+              "ref_completa": "Mateus 17:14-21",
+              "idx_origem": 849
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "9:37-43",
+              "ref_completa": "Lucas 9:37-43",
+              "idx_origem": 850
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 72,
+          "titulo": "Segunda predição da paixão",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "9:30-32",
+              "ref_completa": "Marcos 9:30-32",
+              "idx_origem": 851
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "17:22-23",
+              "ref_completa": "Mateus 17:22-23",
+              "idx_origem": 852
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "9:43-45",
+              "ref_completa": "Lucas 9:43-45",
+              "idx_origem": 853
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 73,
+          "titulo": "Imposto do templo (a moeda na boca do peixe)",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "17:24-27",
+              "ref_completa": "Mateus 17:24-27",
+              "idx_origem": 854
+            }
+          ],
+          "base": "Mateus"
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "titulo": "O Caminho a Jerusalém",
+      "subtitulo": "Discípulos, samaritanos, parábolas pereanas; Lázaro",
+      "total_cenas": 16,
+      "cenas": [
+        {
+          "id": 74,
+          "titulo": "Quem é o maior; criança no meio deles",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "9:33-37",
+              "ref_completa": "Marcos 9:33-37",
+              "idx_origem": 855
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "18:1-6",
+              "ref_completa": "Mateus 18:1-6",
+              "idx_origem": 856
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "9:46-48",
+              "ref_completa": "Lucas 9:46-48",
+              "idx_origem": 857
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 75,
+          "titulo": "'Quem não é contra nós é por nós'",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "9:38-41",
+              "ref_completa": "Marcos 9:38-41",
+              "idx_origem": 858
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "9:49-50",
+              "ref_completa": "Lucas 9:49-50",
+              "idx_origem": 859
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 76,
+          "titulo": "Pedras de tropeço; perdão; parábola do servo impiedoso",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "9:42-50",
+              "ref_completa": "Marcos 9:42-50",
+              "idx_origem": 860
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "18:7-35",
+              "ref_completa": "Mateus 18:7-35",
+              "idx_origem": 861
+            }
+          ],
+          "base": "fusão"
+        },
+        {
+          "id": 77,
+          "titulo": "Jesus rejeita ir publicamente à Festa dos Tabernáculos",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "7:1-9",
+              "ref_completa": "João 7:1-9",
+              "idx_origem": 862
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 78,
+          "titulo": "Aldeia samaritana inóspita; candidatos a discípulo",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "9:51-56",
+              "ref_completa": "Lucas 9:51-56",
+              "idx_origem": 863
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "8:18-22",
+              "ref_completa": "Mateus 8:18-22",
+              "idx_origem": 864
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "9:57-62",
+              "ref_completa": "Lucas 9:57-62",
+              "idx_origem": 865
+            }
+          ],
+          "base": "fusão"
+        },
+        {
+          "id": 79,
+          "titulo": "Jesus na Festa dos Tabernáculos; debates no templo",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "7:10–8:20",
+              "ref_completa": "João 7:10–8:20",
+              "idx_origem": 866
+            },
+            {
+              "evangelho": "João",
+              "ref": "8:21-59",
+              "ref_completa": "João 8:21-59",
+              "idx_origem": 867
+            }
+          ],
+          "base": "João",
+          "nota_editorial": "Inclui o episódio da mulher adúltera (Jo 7:53-8:11), de autenticidade textual debatida — manter com nota.",
+          "conflito_aparente": "Mulher adúltera (Jo 7:53-8:11) ausente nos manuscritos mais antigos"
+        },
+        {
+          "id": 80,
+          "titulo": "Envio dos 70 (ou 72); ai das cidades; pais e filhos",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "10:1–11:13",
+              "ref_completa": "Lucas 10:1–11:13",
+              "idx_origem": 868
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 81,
+          "titulo": "Bom samaritano; Marta e Maria; ensino sobre oração",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "10:1–11:13",
+              "ref_completa": "Lucas 10:1–11:13",
+              "idx_origem": 868
+            }
+          ],
+          "base": "Lucas",
+          "nota_editorial": "Mesma perícope (Lc 10-11) — separar em duas cenas."
+        },
+        {
+          "id": 82,
+          "titulo": "Confronto com fariseus; fermento, ganância, ansiedade",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "11:14–12:34",
+              "ref_completa": "Lucas 11:14–12:34",
+              "idx_origem": 869
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 83,
+          "titulo": "Vigilância; arrependimento; figueira estéril; cura no sábado",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "12:35–13:21",
+              "ref_completa": "Lucas 12:35–13:21",
+              "idx_origem": 870
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 84,
+          "titulo": "Cura do cego de nascença",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "9:1-41",
+              "ref_completa": "João 9:1-41",
+              "idx_origem": 871
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 85,
+          "titulo": "Bom Pastor; Festa da Dedicação",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "10:1-42",
+              "ref_completa": "João 10:1-42",
+              "idx_origem": 872
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 86,
+          "titulo": "Porta estreita; lamento por Jerusalém; banquete",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "13:22–14:24",
+              "ref_completa": "Lucas 13:22–14:24",
+              "idx_origem": 873
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 87,
+          "titulo": "Custo do discipulado; ovelha perdida, moeda perdida, filho pródigo",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "14:25–17:10",
+              "ref_completa": "Lucas 14:25–17:10",
+              "idx_origem": 874
+            }
+          ],
+          "base": "Lucas",
+          "nota_editorial": "Bloco riquíssimo: 3 parábolas da perda (Lc 15) + administrador infiel + Lázaro e o rico."
+        },
+        {
+          "id": 88,
+          "titulo": "Ressurreição de Lázaro",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "11:1-37",
+              "ref_completa": "João 11:1-37",
+              "idx_origem": 875
+            },
+            {
+              "evangelho": "João",
+              "ref": "11:38-57",
+              "ref_completa": "João 11:38-57",
+              "idx_origem": 876
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 89,
+          "titulo": "Cura dos 10 leprosos; Reino dentro; viúva e juiz; fariseu e cobrador",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "17:11–18:8",
+              "ref_completa": "Lucas 17:11–18:8",
+              "idx_origem": 877
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "18:9-14",
+              "ref_completa": "Lucas 18:9-14",
+              "idx_origem": 878
+            }
+          ],
+          "base": "Lucas"
+        }
+      ]
+    },
+    {
+      "num": 9,
+      "titulo": "Última Subida e Entrada em Jerusalém",
+      "subtitulo": "Pereia, Jericó, Betânia, Domingo de Ramos",
+      "total_cenas": 13,
+      "cenas": [
+        {
+          "id": 90,
+          "titulo": "Ensino sobre o divórcio",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "10:1-12",
+              "ref_completa": "Marcos 10:1-12",
+              "idx_origem": 879
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "19:1-12",
+              "ref_completa": "Mateus 19:1-12",
+              "idx_origem": 880
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 91,
+          "titulo": "Jesus abençoa as crianças",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "10:13-16",
+              "ref_completa": "Marcos 10:13-16",
+              "idx_origem": 881
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "19:13-15",
+              "ref_completa": "Mateus 19:13-15",
+              "idx_origem": 882
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "18:15-17",
+              "ref_completa": "Lucas 18:15-17",
+              "idx_origem": 883
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 92,
+          "titulo": "Jovem rico; recompensa dos que deixam tudo",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "10:17-31",
+              "ref_completa": "Marcos 10:17-31",
+              "idx_origem": 884
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "19:16-30",
+              "ref_completa": "Mateus 19:16-30",
+              "idx_origem": 885
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "18:18-30",
+              "ref_completa": "Lucas 18:18-30",
+              "idx_origem": 886
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 93,
+          "titulo": "Trabalhadores na vinha (parábola exclusiva de Mateus)",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "20:1-16",
+              "ref_completa": "Mateus 20:1-16",
+              "idx_origem": 887
+            }
+          ],
+          "base": "Mateus"
+        },
+        {
+          "id": 94,
+          "titulo": "Terceira predição da paixão",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "10:32-34",
+              "ref_completa": "Marcos 10:32-34",
+              "idx_origem": 888
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "20:17-19",
+              "ref_completa": "Mateus 20:17-19",
+              "idx_origem": 889
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "18:31-34",
+              "ref_completa": "Lucas 18:31-34",
+              "idx_origem": 890
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 95,
+          "titulo": "O pedido dos filhos de Zebedeu (e suas mães)",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "10:35-45",
+              "ref_completa": "Marcos 10:35-45",
+              "idx_origem": 891
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "20:20-34",
+              "ref_completa": "Mateus 20:20-34",
+              "idx_origem": 892
+            }
+          ],
+          "base": "Marcos",
+          "nota_editorial": "Mc: Tiago e João pedem. Mt: a mãe deles pede. Não se contradizem — pode ter sido a mãe intercedendo pelos filhos.",
+          "conflito_aparente": "Quem pede os assentos: Tiago/João (Mc) ou a mãe (Mt)?"
+        },
+        {
+          "id": 96,
+          "titulo": "Cura de Bartimeu (e o segundo cego em Mt) saindo de Jericó",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "10:46-52",
+              "ref_completa": "Marcos 10:46-52",
+              "idx_origem": 893
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "18:35–19:27",
+              "ref_completa": "Lucas 18:35–19:27",
+              "idx_origem": 894
+            }
+          ],
+          "base": "Marcos",
+          "nota_editorial": "Mc/Lc: ao SAIR de Jericó; Mt: ao SAIR também, mas dois cegos. Lc 18:35: ao CHEGAR a Jericó. Tradição: havia Jericó velha e nova; o milagre teria ocorrido entre as duas.",
+          "conflito_aparente": "Jericó velha vs. nova; um cego ou dois"
+        },
+        {
+          "id": 97,
+          "titulo": "Zaqueu e a parábola das minas",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "18:35–19:27",
+              "ref_completa": "Lucas 18:35–19:27",
+              "idx_origem": 894
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 98,
+          "titulo": "Unção em Betânia (Maria, irmã de Lázaro)",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "14:3-9",
+              "ref_completa": "Marcos 14:3-9",
+              "idx_origem": 895
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "26:6-13",
+              "ref_completa": "Mateus 26:6-13",
+              "idx_origem": 896
+            },
+            {
+              "evangelho": "João",
+              "ref": "12:1-11",
+              "ref_completa": "João 12:1-11",
+              "idx_origem": 897
+            }
+          ],
+          "base": "João",
+          "nota_editorial": "DIFERENTE da pecadora na Galileia (Lc 7). Mc/Mt põem 2 dias antes da Páscoa; Jo põe 6 dias antes. Tradição: Mc/Mt fazem flashback narrativo.",
+          "conflito_aparente": "Quando exatamente: 6 dias (Jo) ou 2 dias (Mc/Mt) antes da Páscoa"
+        },
+        {
+          "id": 99,
+          "titulo": "Entrada triunfal em Jerusalém (Domingo de Ramos)",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "11:1-11",
+              "ref_completa": "Marcos 11:1-11",
+              "idx_origem": 898
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "21:1-11",
+              "ref_completa": "Mateus 21:1-11",
+              "idx_origem": 899
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "19:28-40",
+              "ref_completa": "Lucas 19:28-40",
+              "idx_origem": 900
+            },
+            {
+              "evangelho": "João",
+              "ref": "12:12-19",
+              "ref_completa": "João 12:12-19",
+              "idx_origem": 901
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Único evento nos 4 evangelhos antes da Paixão. Fundir tudo."
+        },
+        {
+          "id": 100,
+          "titulo": "Jesus chora sobre Jerusalém",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "19:41-44",
+              "ref_completa": "Lucas 19:41-44",
+              "idx_origem": 902
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 101,
+          "titulo": "Gregos pedem para ver Jesus; voz do céu",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "12:20-36",
+              "ref_completa": "João 12:20-36",
+              "idx_origem": 903
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 102,
+          "titulo": "Reflexão final de João sobre a incredulidade",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "12:37-50",
+              "ref_completa": "João 12:37-50",
+              "idx_origem": 904
+            }
+          ],
+          "base": "João"
+        }
+      ]
+    },
+    {
+      "num": 10,
+      "titulo": "A Última Semana no Templo",
+      "subtitulo": "Figueira, expulsão dos vendedores, debates e o Discurso das Oliveiras",
+      "total_cenas": 17,
+      "cenas": [
+        {
+          "id": 103,
+          "titulo": "A figueira amaldiçoada (parte 1)",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "11:12-14",
+              "ref_completa": "Marcos 11:12-14",
+              "idx_origem": 905
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "21:18-22",
+              "ref_completa": "Mateus 21:18-22",
+              "idx_origem": 906
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 104,
+          "titulo": "Segunda purificação do templo",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "11:15-19",
+              "ref_completa": "Marcos 11:15-19",
+              "idx_origem": 907
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "21:12-17",
+              "ref_completa": "Mateus 21:12-17",
+              "idx_origem": 908
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "19:45-48",
+              "ref_completa": "Lucas 19:45-48",
+              "idx_origem": 909
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 105,
+          "titulo": "A figueira seca; lição sobre fé",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "11:20-33",
+              "ref_completa": "Marcos 11:20-33",
+              "idx_origem": 910
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 106,
+          "titulo": "Por que autoridade Jesus faz isso?",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "11:20-33",
+              "ref_completa": "Marcos 11:20-33",
+              "idx_origem": 910
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "21:23-27",
+              "ref_completa": "Mateus 21:23-27",
+              "idx_origem": 911
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "20:1-8",
+              "ref_completa": "Lucas 20:1-8",
+              "idx_origem": 912
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 107,
+          "titulo": "Parábola dos dois filhos",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "21:28-32",
+              "ref_completa": "Mateus 21:28-32",
+              "idx_origem": 913
+            }
+          ],
+          "base": "Mateus"
+        },
+        {
+          "id": 108,
+          "titulo": "Parábola dos lavradores maus",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "12:1-12",
+              "ref_completa": "Marcos 12:1-12",
+              "idx_origem": 914
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "21:33-46",
+              "ref_completa": "Mateus 21:33-46",
+              "idx_origem": 915
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "20:9-19",
+              "ref_completa": "Lucas 20:9-19",
+              "idx_origem": 916
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 109,
+          "titulo": "Parábola das bodas reais",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "22:1-14",
+              "ref_completa": "Mateus 22:1-14",
+              "idx_origem": 917
+            }
+          ],
+          "base": "Mateus"
+        },
+        {
+          "id": 110,
+          "titulo": "'Dai a César o que é de César'",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "12:13-17",
+              "ref_completa": "Marcos 12:13-17",
+              "idx_origem": 918
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "22:15-22",
+              "ref_completa": "Mateus 22:15-22",
+              "idx_origem": 919
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "20:20-26",
+              "ref_completa": "Lucas 20:20-26",
+              "idx_origem": 920
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 111,
+          "titulo": "Saduceus perguntam sobre a ressurreição",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "12:18-27",
+              "ref_completa": "Marcos 12:18-27",
+              "idx_origem": 921
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "22:23-33",
+              "ref_completa": "Mateus 22:23-33",
+              "idx_origem": 922
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "20:27-40",
+              "ref_completa": "Lucas 20:27-40",
+              "idx_origem": 923
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 112,
+          "titulo": "O maior mandamento",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "12:28-34",
+              "ref_completa": "Marcos 12:28-34",
+              "idx_origem": 924
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "22:34-40",
+              "ref_completa": "Mateus 22:34-40",
+              "idx_origem": 925
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 113,
+          "titulo": "Como o Cristo é Filho de Davi?",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "12:35-37",
+              "ref_completa": "Marcos 12:35-37",
+              "idx_origem": 926
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "22:41-46",
+              "ref_completa": "Mateus 22:41-46",
+              "idx_origem": 927
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "20:41-44",
+              "ref_completa": "Lucas 20:41-44",
+              "idx_origem": 928
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 114,
+          "titulo": "Ais contra os escribas e fariseus",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "12:38-40",
+              "ref_completa": "Marcos 12:38-40",
+              "idx_origem": 929
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "23:1-12",
+              "ref_completa": "Mateus 23:1-12",
+              "idx_origem": 930
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "20:45-47",
+              "ref_completa": "Lucas 20:45-47",
+              "idx_origem": 931
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "23:13-39",
+              "ref_completa": "Mateus 23:13-39",
+              "idx_origem": 932
+            }
+          ],
+          "base": "Mateus",
+          "nota_editorial": "Mt 23 tem a versão mais longa (7 ais). Mc/Lc dão versões resumidas."
+        },
+        {
+          "id": 115,
+          "titulo": "A oferta da viúva pobre",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "12:41-44",
+              "ref_completa": "Marcos 12:41-44",
+              "idx_origem": 933
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "21:1-4",
+              "ref_completa": "Lucas 21:1-4",
+              "idx_origem": 934
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 116,
+          "titulo": "Discurso do Monte das Oliveiras (parte 1): destruição do templo",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "13:1-23",
+              "ref_completa": "Marcos 13:1-23",
+              "idx_origem": 935
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "24:1-25",
+              "ref_completa": "Mateus 24:1-25",
+              "idx_origem": 936
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "21:5-24",
+              "ref_completa": "Lucas 21:5-24",
+              "idx_origem": 937
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 117,
+          "titulo": "Discurso (parte 2): vinda do Filho do Homem",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "13:24-31",
+              "ref_completa": "Marcos 13:24-31",
+              "idx_origem": 938
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "24:26-35",
+              "ref_completa": "Mateus 24:26-35",
+              "idx_origem": 939
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "21:25-33",
+              "ref_completa": "Lucas 21:25-33",
+              "idx_origem": 940
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 118,
+          "titulo": "Discurso (parte 3): vigilância; servo fiel",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "13:32-37",
+              "ref_completa": "Marcos 13:32-37",
+              "idx_origem": 941
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "24:36-51",
+              "ref_completa": "Mateus 24:36-51",
+              "idx_origem": 942
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "21:34-38",
+              "ref_completa": "Lucas 21:34-38",
+              "idx_origem": 943
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 119,
+          "titulo": "Parábolas do fim: 10 virgens, talentos, juízo final",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "25:1-46",
+              "ref_completa": "Mateus 25:1-46",
+              "idx_origem": 944
+            }
+          ],
+          "base": "Mateus"
+        }
+      ]
+    },
+    {
+      "num": 11,
+      "titulo": "Paixão",
+      "subtitulo": "Conspiração, Última Ceia, Getsêmani, julgamentos, crucificação",
+      "total_cenas": 26,
+      "cenas": [
+        {
+          "id": 120,
+          "titulo": "Conspiração para matar Jesus",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "14:1-2",
+              "ref_completa": "Marcos 14:1-2",
+              "idx_origem": 945
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "26:1-5",
+              "ref_completa": "Mateus 26:1-5",
+              "idx_origem": 946
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "22:1-2",
+              "ref_completa": "Lucas 22:1-2",
+              "idx_origem": 947
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 121,
+          "titulo": "Judas faz o acordo de traição",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "14:10-11",
+              "ref_completa": "Marcos 14:10-11",
+              "idx_origem": 948
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "26:14-16",
+              "ref_completa": "Mateus 26:14-16",
+              "idx_origem": 949
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "22:3-6",
+              "ref_completa": "Lucas 22:3-6",
+              "idx_origem": 950
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 122,
+          "titulo": "Preparação da Páscoa",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "14:12-16",
+              "ref_completa": "Marcos 14:12-16",
+              "idx_origem": 951
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "26:17-19",
+              "ref_completa": "Mateus 26:17-19",
+              "idx_origem": 952
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "22:7-13",
+              "ref_completa": "Lucas 22:7-13",
+              "idx_origem": 953
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 123,
+          "titulo": "Lava-pés (só em João)",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "13:1-17",
+              "ref_completa": "João 13:1-17",
+              "idx_origem": 954
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 124,
+          "titulo": "A Última Ceia: instituição da eucaristia",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "14:17-26",
+              "ref_completa": "Marcos 14:17-26",
+              "idx_origem": 955
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "26:20-30",
+              "ref_completa": "Mateus 26:20-30",
+              "idx_origem": 956
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "22:14-30",
+              "ref_completa": "Lucas 22:14-30",
+              "idx_origem": 957
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Mc/Mt/Lc/1Cor 11 dão fórmulas levemente diferentes. Lc 22:19b-20 está ausente em alguns manuscritos antigos. Vamos integrar tudo com nota.",
+          "conflito_aparente": "Variações na fórmula eucarística entre os relatos"
+        },
+        {
+          "id": 125,
+          "titulo": "Jesus aponta o traidor",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "13:18-30",
+              "ref_completa": "João 13:18-30",
+              "idx_origem": 958
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 126,
+          "titulo": "Novo mandamento; predição da negação de Pedro (parte 1)",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "13:31-38",
+              "ref_completa": "João 13:31-38",
+              "idx_origem": 959
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 127,
+          "titulo": "Predição da negação de Pedro (parte 2)",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "14:27-31",
+              "ref_completa": "Marcos 14:27-31",
+              "idx_origem": 960
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "26:31-35",
+              "ref_completa": "Mateus 26:31-35",
+              "idx_origem": 961
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "22:31-38",
+              "ref_completa": "Lucas 22:31-38",
+              "idx_origem": 962
+            }
+          ],
+          "base": "Marcos",
+          "nota_editorial": "Os 4 evangelhos predizem a negação, mas em momentos ligeiramente diferentes da ceia. Tradição: Jesus avisou mais de uma vez.",
+          "conflito_aparente": "Momento exato da predição: durante a ceia (Lc/Jo) ou a caminho de Getsêmani (Mc/Mt)"
+        },
+        {
+          "id": 128,
+          "titulo": "Discurso de despedida (parte 1): caminho, verdade, vida; videira",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "14:1–15:17",
+              "ref_completa": "João 14:1–15:17",
+              "idx_origem": 963
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 129,
+          "titulo": "Discurso de despedida (parte 2): mundo vai odiar; oração sacerdotal",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "15:18–17:26",
+              "ref_completa": "João 15:18–17:26",
+              "idx_origem": 964
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 130,
+          "titulo": "Saída para o Getsêmani",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "18:1-2",
+              "ref_completa": "João 18:1-2",
+              "idx_origem": 965
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 131,
+          "titulo": "Agonia no Getsêmani",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "14:32-42",
+              "ref_completa": "Marcos 14:32-42",
+              "idx_origem": 966
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "26:36-46",
+              "ref_completa": "Mateus 26:36-46",
+              "idx_origem": 967
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "22:39-46",
+              "ref_completa": "Lucas 22:39-46",
+              "idx_origem": 968
+            }
+          ],
+          "base": "Marcos",
+          "nota_editorial": "Só Lucas fala do anjo fortalecendo Jesus e do suor como gotas de sangue (Lc 22:43-44, ausente em alguns manuscritos antigos).",
+          "conflito_aparente": "Lc 22:43-44 (anjo fortalecendo, suor de sangue) ausente em manuscritos antigos"
+        },
+        {
+          "id": 132,
+          "titulo": "Prisão de Jesus",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "14:43-52",
+              "ref_completa": "Marcos 14:43-52",
+              "idx_origem": 969
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "26:47-56",
+              "ref_completa": "Mateus 26:47-56",
+              "idx_origem": 970
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "22:47-53",
+              "ref_completa": "Lucas 22:47-53",
+              "idx_origem": 971
+            },
+            {
+              "evangelho": "João",
+              "ref": "18:3-24",
+              "ref_completa": "João 18:3-24",
+              "idx_origem": 972
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Só João nomeia Pedro como o que cortou a orelha de Malco; só Lucas conta a cura."
+        },
+        {
+          "id": 133,
+          "titulo": "Julgamento perante o Sinédrio (à noite)",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "14:53-65",
+              "ref_completa": "Marcos 14:53-65",
+              "idx_origem": 973
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "26:57-68",
+              "ref_completa": "Mateus 26:57-68",
+              "idx_origem": 974
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 134,
+          "titulo": "Negações de Pedro",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "14:66-72",
+              "ref_completa": "Marcos 14:66-72",
+              "idx_origem": 975
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "26:69-75",
+              "ref_completa": "Mateus 26:69-75",
+              "idx_origem": 976
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "22:54-65",
+              "ref_completa": "Lucas 22:54-65",
+              "idx_origem": 977
+            },
+            {
+              "evangelho": "João",
+              "ref": "18:25-27",
+              "ref_completa": "João 18:25-27",
+              "idx_origem": 978
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Os 4 contam, mas com variações nas pessoas que perguntam e na ordem. Tradição harmonizadora: foram 3 negações em sequência rápida, com perguntas vindas de várias pessoas — cada evangelho lembra de detalhes diferentes.",
+          "conflito_aparente": "Quem fez cada uma das 3 perguntas a Pedro varia entre os 4 evangelhos"
+        },
+        {
+          "id": 135,
+          "titulo": "Julgamento matinal do Sinédrio",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "15:1",
+              "ref_completa": "Marcos 15:1",
+              "idx_origem": 979
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "27:1-2",
+              "ref_completa": "Mateus 27:1-2",
+              "idx_origem": 980
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "22:66-71",
+              "ref_completa": "Lucas 22:66-71",
+              "idx_origem": 981
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 136,
+          "titulo": "Morte de Judas",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "27:3-10",
+              "ref_completa": "Mateus 27:3-10",
+              "idx_origem": 982
+            }
+          ],
+          "base": "Mateus",
+          "nota_editorial": "Mt: Judas se enforca e os sacerdotes compram o campo. At 1:18-19: Judas cai e se rebenta. Tradição: ambas — enforcou-se e o corpo caiu depois.",
+          "conflito_aparente": "Mt vs. At sobre a morte de Judas"
+        },
+        {
+          "id": 137,
+          "titulo": "Diante de Pilatos (1ª vez)",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "15:2-5",
+              "ref_completa": "Marcos 15:2-5",
+              "idx_origem": 983
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "27:11-14",
+              "ref_completa": "Mateus 27:11-14",
+              "idx_origem": 984
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "23:1-12",
+              "ref_completa": "Lucas 23:1-12",
+              "idx_origem": 985
+            },
+            {
+              "evangelho": "João",
+              "ref": "18:28-40",
+              "ref_completa": "João 18:28-40",
+              "idx_origem": 986
+            }
+          ],
+          "base": "fusão"
+        },
+        {
+          "id": 138,
+          "titulo": "Diante de Herodes (só em Lucas)",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "23:1-12",
+              "ref_completa": "Lucas 23:1-12",
+              "idx_origem": 985
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 139,
+          "titulo": "Pilatos cede; Barrabás solto",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "15:6-15",
+              "ref_completa": "Marcos 15:6-15",
+              "idx_origem": 987
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "27:15-26",
+              "ref_completa": "Mateus 27:15-26",
+              "idx_origem": 988
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "23:13-25",
+              "ref_completa": "Lucas 23:13-25",
+              "idx_origem": 989
+            },
+            {
+              "evangelho": "João",
+              "ref": "19:1-16",
+              "ref_completa": "João 19:1-16",
+              "idx_origem": 990
+            }
+          ],
+          "base": "fusão"
+        },
+        {
+          "id": 140,
+          "titulo": "Açoite e zombaria",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "15:16-20",
+              "ref_completa": "Marcos 15:16-20",
+              "idx_origem": 991
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "27:27-31",
+              "ref_completa": "Mateus 27:27-31",
+              "idx_origem": 992
+            }
+          ],
+          "base": "Marcos"
+        },
+        {
+          "id": 141,
+          "titulo": "Caminho do Calvário; Simão Cireneu; mulheres de Jerusalém",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "15:21-24",
+              "ref_completa": "Marcos 15:21-24",
+              "idx_origem": 993
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "27:32-34",
+              "ref_completa": "Mateus 27:32-34",
+              "idx_origem": 994
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "23:26-31",
+              "ref_completa": "Lucas 23:26-31",
+              "idx_origem": 995
+            },
+            {
+              "evangelho": "João",
+              "ref": "19:17",
+              "ref_completa": "João 19:17",
+              "idx_origem": 996
+            }
+          ],
+          "base": "fusão"
+        },
+        {
+          "id": 142,
+          "titulo": "Crucificação; sorteio das vestes; bom ladrão; 'Eis tua mãe'",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "15:25-32",
+              "ref_completa": "Marcos 15:25-32",
+              "idx_origem": 997
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "27:35-44",
+              "ref_completa": "Mateus 27:35-44",
+              "idx_origem": 998
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "23:32-43",
+              "ref_completa": "Lucas 23:32-43",
+              "idx_origem": 999
+            },
+            {
+              "evangelho": "João",
+              "ref": "19:18-27",
+              "ref_completa": "João 19:18-27",
+              "idx_origem": 1000
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Só Lc tem o bom ladrão e o 'Pai, perdoa-lhes'. Só Jo tem 'Eis tua mãe' e Maria ao pé da cruz. Mc/Mt registram só o 'Eli, Eli...'. Vamos integrar todas as 7 palavras.",
+          "conflito_aparente": "As 7 palavras de Jesus na cruz vêm distribuídas entre os 4 evangelhos"
+        },
+        {
+          "id": 143,
+          "titulo": "Morte de Jesus; trevas; véu rasgado; centurião confessa",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "15:33-41",
+              "ref_completa": "Marcos 15:33-41",
+              "idx_origem": 1001
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "27:45-56",
+              "ref_completa": "Mateus 27:45-56",
+              "idx_origem": 1002
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "23:44-49",
+              "ref_completa": "Lucas 23:44-49",
+              "idx_origem": 1003
+            },
+            {
+              "evangelho": "João",
+              "ref": "19:28-37",
+              "ref_completa": "João 19:28-37",
+              "idx_origem": 1004
+            }
+          ],
+          "base": "fusão"
+        },
+        {
+          "id": 144,
+          "titulo": "Sepultamento por José de Arimateia",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "15:42-47",
+              "ref_completa": "Marcos 15:42-47",
+              "idx_origem": 1005
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "27:57-61",
+              "ref_completa": "Mateus 27:57-61",
+              "idx_origem": 1006
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "23:50-56",
+              "ref_completa": "Lucas 23:50-56",
+              "idx_origem": 1007
+            },
+            {
+              "evangelho": "João",
+              "ref": "19:38-42",
+              "ref_completa": "João 19:38-42",
+              "idx_origem": 1008
+            }
+          ],
+          "base": "fusão"
+        },
+        {
+          "id": 145,
+          "titulo": "Guarda no túmulo (só em Mateus)",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "27:62-66",
+              "ref_completa": "Mateus 27:62-66",
+              "idx_origem": 1009
+            }
+          ],
+          "base": "Mateus"
+        }
+      ]
+    },
+    {
+      "num": 12,
+      "titulo": "Ressurreição e Ascensão",
+      "subtitulo": "O túmulo vazio, aparições, comissão, subida ao céu",
+      "total_cenas": 8,
+      "cenas": [
+        {
+          "id": 146,
+          "titulo": "As mulheres encontram o túmulo vazio",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "16:1-8",
+              "ref_completa": "Marcos 16:1-8",
+              "idx_origem": 1010
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "28:1-7",
+              "ref_completa": "Mateus 28:1-7",
+              "idx_origem": 1011
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "24:1-12",
+              "ref_completa": "Lucas 24:1-12",
+              "idx_origem": 1012
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Cada evangelho lista MULHERES e ANJOS de forma um pouco diferente: Mc fala de 1 jovem; Mt 1 anjo; Lc 2 homens; Jo 2 anjos. Tradição: havia mais de um anjo, e cada evangelho menciona quem foi mais relevante.",
+          "conflito_aparente": "Quantos anjos no túmulo, quais mulheres foram, em que ordem"
+        },
+        {
+          "id": 147,
+          "titulo": "Maria Madalena vê Jesus; guardas subornados",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "16:9-13",
+              "ref_completa": "Marcos 16:9-13",
+              "idx_origem": 1013
+            },
+            {
+              "evangelho": "João",
+              "ref": "20:1-18",
+              "ref_completa": "João 20:1-18",
+              "idx_origem": 1014
+            },
+            {
+              "evangelho": "Mateus",
+              "ref": "28:8-15",
+              "ref_completa": "Mateus 28:8-15",
+              "idx_origem": 1015
+            }
+          ],
+          "base": "fusão",
+          "nota_editorial": "Jo 20:1-18 dá o detalhe mais íntimo (\"Não me detenhas\"). O final 'longo' de Marcos (16:9-20) está ausente em manuscritos antigos.",
+          "conflito_aparente": "Mc 16:9-20 ausente em manuscritos antigos"
+        },
+        {
+          "id": 148,
+          "titulo": "Caminho de Emaús",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "24:13-43",
+              "ref_completa": "Lucas 24:13-43",
+              "idx_origem": 1016
+            },
+            {
+              "evangelho": "Marcos",
+              "ref": "16:12-13",
+              "ref_completa": "Marcos 16:12-13",
+              "idx_origem": 1017
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 149,
+          "titulo": "Aparição aos discípulos (sem Tomé)",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "20:19-23",
+              "ref_completa": "João 20:19-23",
+              "idx_origem": 1018
+            },
+            {
+              "evangelho": "Marcos",
+              "ref": "16:14",
+              "ref_completa": "Marcos 16:14",
+              "idx_origem": 1019
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 150,
+          "titulo": "Tomé vê Jesus; aparição no mar da Galileia (Tibérias)",
+          "fontes": [
+            {
+              "evangelho": "João",
+              "ref": "20:24–21:25",
+              "ref_completa": "João 20:24–21:25",
+              "idx_origem": 1020
+            }
+          ],
+          "base": "João"
+        },
+        {
+          "id": 151,
+          "titulo": "Grande Comissão na Galileia",
+          "fontes": [
+            {
+              "evangelho": "Mateus",
+              "ref": "28:16-20",
+              "ref_completa": "Mateus 28:16-20",
+              "idx_origem": 1021
+            },
+            {
+              "evangelho": "Marcos",
+              "ref": "16:15-18",
+              "ref_completa": "Marcos 16:15-18",
+              "idx_origem": 1022
+            }
+          ],
+          "base": "Mateus"
+        },
+        {
+          "id": 152,
+          "titulo": "Jesus abre o entendimento das Escrituras",
+          "fontes": [
+            {
+              "evangelho": "Lucas",
+              "ref": "24:44-49",
+              "ref_completa": "Lucas 24:44-49",
+              "idx_origem": 1023
+            }
+          ],
+          "base": "Lucas"
+        },
+        {
+          "id": 153,
+          "titulo": "Ascensão",
+          "fontes": [
+            {
+              "evangelho": "Marcos",
+              "ref": "16:19-20",
+              "ref_completa": "Marcos 16:19-20",
+              "idx_origem": 1024
+            },
+            {
+              "evangelho": "Lucas",
+              "ref": "24:50-53",
+              "ref_completa": "Lucas 24:50-53",
+              "idx_origem": 1025
+            }
+          ],
+          "base": "Lucas",
+          "nota_editorial": "Atos 1 dá a versão mais detalhada (40 dias, nuvem, anjos)."
+        }
+      ]
+    }
+  ]
+}

@@ -76,6 +76,17 @@ export default function LangLayout({
           ))}
         </ul>
 
+        {/* Cronológica (em construção) */}
+        <div className="mt-8 pt-4 border-t border-[var(--border)]">
+          <h3 className="text-xs font-sans font-bold uppercase tracking-wide text-[var(--muted)] mb-2">
+            {lang === 'pt' ? 'Cronológica' : lang === 'en' ? 'Chronological' : 'Cronológica'}
+            <span className="ml-1.5 text-[10px] normal-case font-normal text-[var(--accent)]">beta</span>
+          </h3>
+          <Link href={`/${lang}/cronologica/evangelhos-mapa/`} className="block text-sm hover:text-[var(--accent)] transition mb-1">
+            {lang === 'pt' ? 'Mapa dos evangelhos' : lang === 'en' ? 'Gospel map' : 'Mapa de los evangelios'}
+          </Link>
+        </div>
+
         {/* Footer links */}
         <div className="mt-8 pt-4 border-t border-[var(--border)] space-y-1">
           <Link href={`/${lang}/sobre/`} className="block text-xs font-sans text-[var(--muted)] hover:text-[var(--accent)] transition">
