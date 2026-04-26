@@ -242,7 +242,24 @@ export default function VerseReader({
   const clearSelection = () => setSelected(new Set());
 
   const getNotesForVerse = (verseNum: number): Note[] => {
-    return notes.filter((n) => n.verse.startsWith(String(verseNum)));
+    return notes.filter((n) => {
+      const v = n.verse;
+      // "1a", "1b", "1ᵃ" — sufixo de letra (single verse)
+      const singleMatch = v.match(/^(\d+)[a-zA-Zᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿ]*$/);
+      if (singleMatch) return parseInt(singleMatch[1], 10) === verseNum;
+      // "1-3" — range
+      const rangeMatch = v.match(/^(\d+)\s*[-–]\s*(\d+)/);
+      if (rangeMatch) {
+        const start = parseInt(rangeMatch[1], 10);
+        const end = parseInt(rangeMatch[2], 10);
+        return verseNum >= start && verseNum <= end;
+      }
+      // "1,3,5" — lista
+      if (v.includes(',')) {
+        return v.split(',').map((s) => parseInt(s.trim(), 10)).includes(verseNum);
+      }
+      return false;
+    });
   };
 
   // Modo leitura: texto corrido sem números
