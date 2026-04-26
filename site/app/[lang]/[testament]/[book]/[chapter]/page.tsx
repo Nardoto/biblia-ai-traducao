@@ -124,7 +124,7 @@ export default function ChapterPage({
 
       {/* Content */}
       {content ? (
-        <VerseReader content={content} bookName={book.display[lang]} chapter={chapter} />
+        <VerseReader content={content} bookName={book.display[lang]} chapter={chapter} lang={lang} />
       ) : (
         <div className="text-center py-16">
           <p className="text-[var(--muted)] text-lg mb-2">

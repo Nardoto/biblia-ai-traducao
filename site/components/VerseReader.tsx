@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import { linkifyBibleRefs } from '@/lib/bible-refs';
+import type { Language } from '@/lib/bible-data';
 
 interface Verse {
   number: number;
@@ -176,10 +178,12 @@ export default function VerseReader({
   content,
   bookName,
   chapter,
+  lang,
 }: {
   content: string;
   bookName: string;
   chapter: number;
+  lang: Language;
 }) {
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [showNote, setShowNote] = useState<string | null>(null);
@@ -323,7 +327,8 @@ export default function VerseReader({
                   {verseNotes.map((n, i) => (
                     <span key={i}>
                       {i > 0 && ' '}
-                      <span className="font-medium text-[var(--note-tag)]">v.{n.verse}</span>: {n.text}
+                      <span className="font-medium text-[var(--note-tag)]">v.{n.verse}</span>:{' '}
+                      <span dangerouslySetInnerHTML={{ __html: linkifyBibleRefs(n.text, lang) }} />
                     </span>
                   ))}
                 </span>
@@ -362,7 +367,8 @@ export default function VerseReader({
               <ul>
                 {notes.map((n, i) => (
                   <li key={i}>
-                    <span className="font-medium text-[var(--note-tag)] font-sans">v.{n.verse}</span>: {n.text}
+                    <span className="font-medium text-[var(--note-tag)] font-sans">v.{n.verse}</span>:{' '}
+                    <span dangerouslySetInnerHTML={{ __html: linkifyBibleRefs(n.text, lang) }} />
                   </li>
                 ))}
               </ul>
@@ -379,7 +385,7 @@ export default function VerseReader({
                     <div className="expanded-entry-content">
                       {entry.content.split('\n').map((line, j) => (
                         <p key={j} dangerouslySetInnerHTML={{
-                          __html: line
+                          __html: linkifyBibleRefs(line, lang)
                             .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
                             .replace(/\*(.+?)\*/g, '<em>$1</em>')
                         }} />
