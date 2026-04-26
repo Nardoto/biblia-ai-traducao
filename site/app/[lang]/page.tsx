@@ -95,10 +95,10 @@ export default function LangHome({ params }: { params: { lang: Language } }) {
             </h2>
             <p className="text-sm text-[var(--muted)] leading-snug">
               {lang === 'pt'
-                ? 'Capítulo 1 pronto: prólogos e nascimento de Jesus, com os 4 evangelhos fundidos numa só narrativa'
+                ? 'Os 4 evangelhos fundidos numa só narrativa contínua — 12 capítulos prontos, do nascimento à ascensão'
                 : lang === 'en'
-                  ? 'Chapter 1 ready: prologues and birth of Jesus, with the 4 gospels fused into one narrative'
-                  : 'Capítulo 1 listo: prólogos y nacimiento de Jesús, con los 4 evangelios fusionados en una sola narrativa'}
+                  ? 'The 4 gospels fused into one continuous narrative — 12 chapters ready, from birth to ascension'
+                  : 'Los 4 evangelios fusionados en una sola narrativa continua — 12 capítulos listos, del nacimiento a la ascensión'}
             </p>
           </div>
           <span className="text-[var(--accent)] text-xl group-hover:translate-x-0.5 transition">→</span>
